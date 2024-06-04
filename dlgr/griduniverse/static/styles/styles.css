@@ -18,6 +18,11 @@
 #dashboard {
 }
 
+.recipes {
+    width: 25vw;
+    float:right;
+}
+
 .GroupIndicator {
     display: inline-block;
     height: 10px;
