@@ -22272,7 +22272,6 @@ var require;/*global dallinger, store */
   }
 
   function onDiscoveringItem(msg) {
-    console.log(settings.public_knowledge);
     if ((settings.public_knowledge) | (msg.player_id == players.ego_id)) {
       // Find table on dashboard and insert new row
       const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
@@ -22287,10 +22286,12 @@ var require;/*global dallinger, store */
   }
 
   function onDiscoveringTransition(msg) {
-    const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
-    let row = tableBody.insertRow();
-    let cellTransitions = row.insertCell(0);
-    cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+    if ((settings.public_knowledge) | (msg.player_id == players.ego_id)) {
+      const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
+      let row = tableBody.insertRow();
+      let cellTransitions = row.insertCell(0);
+      cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+    }
   }
 
   function onGameStateChange(msg) {

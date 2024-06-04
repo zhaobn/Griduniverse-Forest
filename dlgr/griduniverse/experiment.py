@@ -1541,17 +1541,32 @@ class Griduniverse(Experiment):
             for player_to in self.grid.players.values():
                 player_to.score += player_item.public_good
 
-        if not player_item.item_id in self.grid.discovered_rewards:
-            self.grid.discovered_rewards[player_item.item_id] = player_item.calories
+        if self.grid.public_knowledge:
+            if not player_item.item_id in self.grid.discovered_rewards:
+                self.grid.discovered_rewards[player_item.item_id] = player_item.calories
 
-            message = {
-                "type": "unique_consume",
-                "item": player_item.item_id,
-                "calories": player_item.calories,
-                "player_id": player.id
-            }
+                message = {
+                    "type": "unique_consume",
+                    "item": player_item.item_id,
+                    "calories": player_item.calories,
+                    "player_id": player.id
+                }
 
-            self.publish(message)
+                self.publish(message)
+        else:
+            if not player.id in self.grid.discovered_rewards:
+                self.grid.discovered_rewards[player.id] = {}
+            if not player_item.item_id in self.grid.discovered_rewards[player.id]:
+                self.grid.discovered_rewards[player.id][player_item.item_id] = player_item.calories
+
+                message = {
+                    "type": "unique_consume",
+                    "item": player_item.item_id,
+                    "calories": player_item.calories,
+                    "player_id": player.id
+                }
+
+                self.publish(message)
 
     def handle_item_pick_up(self, msg):
         player = self.grid.players[msg["player_id"]]
@@ -1660,19 +1675,36 @@ class Griduniverse(Experiment):
             player.score += per_player
             player.score += transition_calories % (len(neighbors) + 1)
         
-        uniquetransition = (transition["actor_start"], transition["target_start"])
-        if not uniquetransition in self.grid.discovered_transitions:
-            self.grid.discovered_transitions[uniquetransition] = transition["target_end"]
+        if self.grid.public_knowledge:
+            uniquetransition = (transition["actor_start"], transition["target_start"])
+            if not uniquetransition in self.grid.discovered_transitions:
+                self.grid.discovered_transitions[uniquetransition] = transition["target_end"]
 
-            message = {
-                "type": "unique_transition",
-                "item1": transition["actor_start"],
-                "item2": transition["target_start"],
-                "resultitem": transition["target_end"],
-                "player_id": player.id
-            }
+                message = {
+                    "type": "unique_transition",
+                    "item1": transition["actor_start"],
+                    "item2": transition["target_start"],
+                    "resultitem": transition["target_end"],
+                    "player_id": player.id
+                }
 
-            self.publish(message)
+                self.publish(message)
+        else:
+            if not player.id in self.grid.discovered_transitions:
+                self.grid.discovered_transitions[player.id] = {}
+            uniquetransition = (transition["actor_start"], transition["target_start"])
+            if not uniquetransition in self.grid.discovered_transitions[player.id]:
+                self.grid.discovered_transitions[player.id][uniquetransition] = transition["target_end"]
+
+                message = {
+                    "type": "unique_transition",
+                    "item1": transition["actor_start"],
+                    "item2": transition["target_start"],
+                    "resultitem": transition["target_end"],
+                    "player_id": player.id
+                }
+
+                self.publish(message)
 
 
     def handle_item_drop(self, msg):
