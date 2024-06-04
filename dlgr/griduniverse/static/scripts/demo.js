@@ -988,8 +988,8 @@
       (state) => settings.item_config[state],
     );
 
-    const aStartItemString = `✋${aStartItem ? aStartItem.name : "⬜"}`;
-    const tStartItemString = tStartItem ? tStartItem.name : "⬜";
+    const aStartItemString = `✋${aStartItem ? replaceItemNameWithEmoji(aStartItem.item_id) : "⬜"}`;
+    const tStartItemString = tStartItem ? replaceItemNameWithEmoji(tStartItem.item_id) : "⬜";
     if (transitionVisibility == "never") {
       return `${aStartItemString} + ${tStartItemString}`;
     }
@@ -998,8 +998,8 @@
       var aEndItemString = "✋❓";
       var tEndItemString = "❓";
     } else {
-      aEndItemString = `✋${aEndItem ? aEndItem.name : "⬜"}`;
-      tEndItemString = tEndItem ? tEndItem.name : "⬜";
+      aEndItemString = `✋${aEndItem ? replaceItemNameWithEmoji(aEndItem.item_id) : "⬜"}`;
+      tEndItemString = tEndItem ? replaceItemNameWithEmoji(tEndItem.item_id) : "⬜";
     }
     var actors_info = "";
     const required_actors = transition.transition.required_actors;
@@ -1044,7 +1044,7 @@
       // If we're holding an item with calories, indicate that we might
       // want to consume it.
       if (egoPlayer.currentItem && egoPlayer.currentItem.calories) {
-        $element.html(`✋${egoPlayer.currentItem.name} + 😋`);
+        $element.html(`✋${replaceItemNameWithEmoji(egoPlayer.currentItem.item_id)} + 😋`);
       } else {
         $element.empty();
       }
@@ -1064,7 +1064,6 @@
 
   function replaceItemNameWithEmoji(item) {
     // Function to find item sprite in game config based on item id
-    console.log(item);
     if (item != "") {
       const itemConfig = settings.item_config;
       const itemsArray = Object.values(itemConfig);
