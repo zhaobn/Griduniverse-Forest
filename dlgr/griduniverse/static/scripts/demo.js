@@ -703,7 +703,7 @@
       var transition = ego.getTransition();
       if (!item_at_pos && !player_item) {
         // If there's nothing here, we try to plant food GU 1.0 style
-        msg_type = "plant_food";
+        // msg_type = "plant_food";
       } else if (transition) {
         // Check for a transition between objects. For now we don't do anything
         // client-side other checking that it exists. We could optimize display
