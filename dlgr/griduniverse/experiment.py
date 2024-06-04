@@ -1662,7 +1662,7 @@ class Griduniverse(Experiment):
             self.grid.discovered_transitions[uniquetransition] = transition["target_end"]
 
             message = {
-                "type": "transition",
+                "type": "unique_transition",
                 "item1": transition["actor_start"],
                 "item2": transition["target_start"],
                 "resultitem": transition["target_end"]

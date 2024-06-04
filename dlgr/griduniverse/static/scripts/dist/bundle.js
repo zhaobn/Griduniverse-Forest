@@ -19229,25 +19229,6 @@ function rgbOnScale(startColor, endColor, percentage) {
   return result;
 }
 
-// export function populateItemTable() {
-//   const itemConfig = settings.item_config;
-//   const itemsArray = Object.values(itemConfig);
-//   console.log(itemsArray);
-//   const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
-
-//   itemsArray.forEach(item => {
-//       let row = tableBody.insertRow();
-//       let cellSprite = row.insertCell(0);
-//       let cellCalories = row.insertCell(1);
-
-//       cellSprite.innerHTML = item.sprite.substring(6);
-//       cellCalories.innerHTML = item.calories;
-//   });
-// }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   populateItemTable();
-// });
 
 
 /***/ }),
@@ -22278,14 +22259,31 @@ var require;/*global dallinger, store */
     $("#inventory-item").text(displayValue);
   }
 
+  function replaceItemNameWithEmoji(item) {
+    // Function to find item sprite in game config based on item id
+    const itemConfig = settings.item_config;
+    const itemsArray = Object.values(itemConfig);
+    const itemInfo = itemsArray.find((element) => element.item_id == item);
+    return itemInfo.sprite.substring(6);
+  }
+
   function onDiscoveringItem(msg) {
+    // Find table on dashboard and insert new row
     const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
     let row = tableBody.insertRow();
     let cellSprite = row.insertCell(0);
     let cellCalories = row.insertCell(1);
 
-    cellSprite.innerHTML = msg.item;
+    // Find item sprite from game config and add to row
+    cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item);
     cellCalories.innerHTML = msg.calories;
+  }
+
+  function onDiscoveringTransition(msg) {
+    const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
+    let row = tableBody.insertRow();
+    let cellTransitions = row.insertCell(0);
+    cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} x ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
   }
 
   function onGameStateChange(msg) {
@@ -22515,6 +22513,7 @@ var require;/*global dallinger, store */
         wall_built: addWall,
         move_rejection: onMoveRejected,
         unique_consume: onDiscoveringItem,
+        unique_transition: onDiscoveringTransition,
       },
     };
     const socket = new socketlib.GUSocket(socketSettings);
