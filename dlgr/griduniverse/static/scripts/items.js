@@ -133,3 +133,23 @@ function rgbOnScale(startColor, endColor, percentage) {
 
   return result;
 }
+
+// export function populateItemTable() {
+//   const itemConfig = settings.item_config;
+//   const itemsArray = Object.values(itemConfig);
+//   console.log(itemsArray);
+//   const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+
+//   itemsArray.forEach(item => {
+//       let row = tableBody.insertRow();
+//       let cellSprite = row.insertCell(0);
+//       let cellCalories = row.insertCell(1);
+
+//       cellSprite.innerHTML = item.sprite.substring(6);
+//       cellCalories.innerHTML = item.calories;
+//   });
+// }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   populateItemTable();
+// });

@@ -19229,6 +19229,26 @@ function rgbOnScale(startColor, endColor, percentage) {
   return result;
 }
 
+// export function populateItemTable() {
+//   const itemConfig = settings.item_config;
+//   const itemsArray = Object.values(itemConfig);
+//   console.log(itemsArray);
+//   const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+
+//   itemsArray.forEach(item => {
+//       let row = tableBody.insertRow();
+//       let cellSprite = row.insertCell(0);
+//       let cellCalories = row.insertCell(1);
+
+//       cellSprite.innerHTML = item.sprite.substring(6);
+//       cellCalories.innerHTML = item.calories;
+//   });
+// }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   populateItemTable();
+// });
+
 
 /***/ }),
 /* 11 */
@@ -22258,6 +22278,16 @@ var require;/*global dallinger, store */
     $("#inventory-item").text(displayValue);
   }
 
+  function onDiscoveringItem(msg) {
+    const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+    let row = tableBody.insertRow();
+    let cellSprite = row.insertCell(0);
+    let cellCalories = row.insertCell(1);
+
+    cellSprite.innerHTML = msg.item;
+    cellCalories.innerHTML = msg.calories;
+  }
+
   function onGameStateChange(msg) {
     var $donationButtons = $(
         "#individual-donate, #group-donate, #public-donate, #ingroup-donate",
@@ -22484,6 +22514,7 @@ var require;/*global dallinger, store */
         stop: gameOverHandler(player_id),
         wall_built: addWall,
         move_rejection: onMoveRejected,
+        unique_consume: onDiscoveringItem,
       },
     };
     const socket = new socketlib.GUSocket(socketSettings);

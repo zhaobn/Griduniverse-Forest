@@ -283,6 +283,8 @@ class Gridworld(object):
         self.item_locations = {}
         self.items_consumed = []
         self.start_timestamp = kwargs.get("start_timestamp", None)
+        self.discovered_rewards = {}
+        self.discovered_transitions = {}
 
         self.round = 0
 
@@ -619,6 +621,7 @@ class Gridworld(object):
                 del self.item_locations[position]
                 # Update existence and count of item.
                 self.items_consumed.append(item)
+
                 self.items_updated = True
                 if item.respawn:
                     # respawn same type of item.
@@ -1536,6 +1539,17 @@ class Griduniverse(Experiment):
             for player_to in self.grid.players.values():
                 player_to.score += player_item.public_good
 
+        if not player_item.item_id in self.grid.discovered_rewards:
+            self.grid.discovered_rewards[player_item.item_id] = player_item.calories
+
+            message = {
+                "type": "unique_consume",
+                "item": player_item.item_id,
+                "calories": player_item.calories
+            }
+
+            self.publish(message)
+
     def handle_item_pick_up(self, msg):
         player = self.grid.players[msg["player_id"]]
         player_item = player.current_item
@@ -1642,6 +1656,20 @@ class Griduniverse(Experiment):
                 other_player.score += per_player
             player.score += per_player
             player.score += transition_calories % (len(neighbors) + 1)
+        
+        uniquetransition = (transition["actor_start"], transition["target_start"])
+        if not uniquetransition in self.grid.discovered_transitions:
+            self.grid.discovered_transitions[uniquetransition] = transition["target_end"]
+
+            message = {
+                "type": "transition",
+                "item1": transition["actor_start"],
+                "item2": transition["target_start"],
+                "resultitem": transition["target_end"]
+            }
+
+            self.publish(message)
+
 
     def handle_item_drop(self, msg):
         player = self.grid.players[msg["player_id"]]

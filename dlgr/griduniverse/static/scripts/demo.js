@@ -1062,6 +1062,16 @@
     $("#inventory-item").text(displayValue);
   }
 
+  function onDiscoveringItem(msg) {
+    const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+    let row = tableBody.insertRow();
+    let cellSprite = row.insertCell(0);
+    let cellCalories = row.insertCell(1);
+
+    cellSprite.innerHTML = msg.item;
+    cellCalories.innerHTML = msg.calories;
+  }
+
   function onGameStateChange(msg) {
     var $donationButtons = $(
         "#individual-donate, #group-donate, #public-donate, #ingroup-donate",
@@ -1288,6 +1298,7 @@
         stop: gameOverHandler(player_id),
         wall_built: addWall,
         move_rejection: onMoveRejected,
+        unique_consume: onDiscoveringItem,
       },
     };
     const socket = new socketlib.GUSocket(socketSettings);
