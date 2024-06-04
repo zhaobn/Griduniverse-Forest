@@ -110,6 +110,7 @@ GU_PARAMS = {
     "donation_multiplier": float,
     "num_recruits": int,
     "state_interval": float,
+    "public_knowledge": bool,
 }
 
 DEFAULT_ITEM_CONFIG = {
@@ -225,6 +226,7 @@ class Gridworld(object):
         self.identity_signaling = kwargs.get("identity_signaling", False)
         self.identity_starts_visible = kwargs.get("identity_starts_visible", False)
         self.use_identicons = kwargs.get("use_identicons", False)
+        self.public_knowledge = kwargs.get("public_knowledge", True)
 
         # Walls
         self.walls_visible = kwargs.get("walls_visible", True)

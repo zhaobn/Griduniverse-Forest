@@ -1090,7 +1090,7 @@
     const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
     let row = tableBody.insertRow();
     let cellTransitions = row.insertCell(0);
-    cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} x ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+    cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
   }
 
   function onGameStateChange(msg) {
