@@ -45,25 +45,25 @@ items:
   - sprite: "emoji:💙"
     name: Blue Heart
     item_id: blue_heart
-    calories: 5
+    calories: 1
     item_count: 4
 
   - sprite: "emoji:🩷"
     name: Pink Heart
     item_id: pink_heart
-    calories: 5
+    calories: 1
     item_count: 4
 
   - sprite: "emoji:💛"
     name: Yellow Heart
     item_id: yellow_heart
-    calories: 5
+    calories: 1
     item_count: 4
 
   - sprite: "emoji:💚"
     name: Green Heart
     item_id: green_heart
-    calories: 5
+    calories: 1
     item_count: 4
 
   - sprite: "emoji:🌼"
@@ -78,7 +78,7 @@ items:
   - sprite: "emoji:⭐️"
     name: Yellow Star
     item_id: yellow_star
-    calories: 20
+    calories: 100
 
 
 transitions:
