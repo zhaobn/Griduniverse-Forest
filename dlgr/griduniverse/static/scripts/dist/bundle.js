@@ -22222,7 +22222,7 @@ var require;/*global dallinger, store */
     if (!inspectedItem) {
       $element.empty();
     } else {
-      $element.html(inspectedItem.name);
+      $element.html(replaceItemNameWithEmoji(inspectedItem.item_id));
     }
   }
 
@@ -22255,16 +22255,21 @@ var require;/*global dallinger, store */
    */
   function updateMyInventoryDisplay(egoPlayer) {
     const item = egoPlayer.currentItem;
-    const displayValue = item ? item.name : "";
-    $("#inventory-item").text(displayValue);
+    const displayValue = item ? item.item_id : "";
+    $("#inventory-item").text(replaceItemNameWithEmoji(displayValue));
   }
 
   function replaceItemNameWithEmoji(item) {
     // Function to find item sprite in game config based on item id
-    const itemConfig = settings.item_config;
-    const itemsArray = Object.values(itemConfig);
-    const itemInfo = itemsArray.find((element) => element.item_id == item);
-    return itemInfo.sprite.substring(6);
+    console.log(item);
+    if (item != "") {
+      const itemConfig = settings.item_config;
+      const itemsArray = Object.values(itemConfig);
+      const itemInfo = itemsArray.find((element) => element.item_id == item);
+      return itemInfo.sprite.substring(6);
+    } else {
+      return "";
+    }
   }
 
   function onDiscoveringItem(msg) {
