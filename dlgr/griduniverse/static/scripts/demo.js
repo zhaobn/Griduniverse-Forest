@@ -1075,15 +1075,18 @@
   }
 
   function onDiscoveringItem(msg) {
-    // Find table on dashboard and insert new row
-    const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
-    let row = tableBody.insertRow();
-    let cellSprite = row.insertCell(0);
-    let cellCalories = row.insertCell(1);
+    console.log(settings.public_knowledge);
+    if ((settings.public_knowledge) | (msg.player_id == players.ego_id)) {
+      // Find table on dashboard and insert new row
+      const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+      let row = tableBody.insertRow();
+      let cellSprite = row.insertCell(0);
+      let cellCalories = row.insertCell(1);
 
-    // Find item sprite from game config and add to row
-    cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item);
-    cellCalories.innerHTML = msg.calories;
+      // Find item sprite from game config and add to row
+      cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item);
+      cellCalories.innerHTML = msg.calories;
+    } 
   }
 
   function onDiscoveringTransition(msg) {

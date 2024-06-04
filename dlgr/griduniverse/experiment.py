@@ -1547,7 +1547,8 @@ class Griduniverse(Experiment):
             message = {
                 "type": "unique_consume",
                 "item": player_item.item_id,
-                "calories": player_item.calories
+                "calories": player_item.calories,
+                "player_id": player.id
             }
 
             self.publish(message)
@@ -1667,7 +1668,8 @@ class Griduniverse(Experiment):
                 "type": "unique_transition",
                 "item1": transition["actor_start"],
                 "item2": transition["target_start"],
-                "resultitem": transition["target_end"]
+                "resultitem": transition["target_end"],
+                "player_id": player.id
             }
 
             self.publish(message)

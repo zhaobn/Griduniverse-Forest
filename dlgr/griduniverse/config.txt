@@ -4,7 +4,7 @@ auto_recruit = true
 network = FullyConnected
 max_participants = 2
 num_rounds = 1
-time_per_round = 45
+time_per_round = 1000
 block_size = 20
 columns = 20
 rows = 20
@@ -13,7 +13,7 @@ window_columns = 20
 use_identicons = true
 show_chatroom = true
 recruiter = hotair
-public_knowledge = true
+public_knowledge = false
 
 [HIT Configuration]
 title = Griduniverse
