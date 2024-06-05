@@ -62,11 +62,21 @@
 
 <div id="dashboard">
     <p>
-        <span id="score">0</span> points ($<span id="dollars">0.00</span>),
+        <span id="score" style="font-weight:bold;font-size:2rem;">0</span> points ($<span id="dollars">0.00</span>),
         <span id="time">?</span> seconds remaining
     </p>
 </div>
 <p class="grid-loading">Loading Game World <span>.</span><span>.</span><span>.</span></p>
+
+<div id="inventory">
+    Currently Carrying: <span id="inventory-item"></span>
+</div>
+<div id="location-contents">
+    At this Location: <span id="location-contents-item"></span>
+</div>
+<div id="item-transitions">
+    Available Transitions: <span id="transition-details"></span>
+</div>
 
 <div id="recipes" style="display:flex;">
     <div id="grid" data-identicon-salt="{{ app_id }}">
@@ -74,7 +84,7 @@
     </div>
 
     <div id="infodashboard" style="padding-left: 20px;">
-        <table id="recipe-table">
+        <table id="recipe-table" class="scrolldown">
             <thead>
                 <tr>
                     <th>Transitions</th>
@@ -84,8 +94,8 @@
                  <!-- Transitions will be inserted here. -->
             </tbody>
          </table>
-        
-        <table id="reward-table">
+
+        <table id="reward-table" class="scrolldown">
             <thead>
                 <tr>
                     <th>Item</th>
@@ -99,15 +109,6 @@
     </div>
 </div>
 
-<div id="inventory">
-    Currently Carrying: <span id="inventory-item"></span>
-</div>
-<div id="location-contents">
-    At this Location: <span id="location-contents-item"></span>
-</div>
-<div id="item-transitions">
-    Available Transitions: <span id="transition-details"></span>
-</div>
 {% if experiment.grid.donation_amount %}
 <div id="donate" class="for-players">
     <label>Give {{ experiment.grid.donation_amount }} point{{experiment.grid.donation_amount > 1 and 's' or ''}} to:</label>
