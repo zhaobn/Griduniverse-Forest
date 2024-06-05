@@ -25,6 +25,7 @@ from dallinger.experiment import Experiment
 from faker import Factory
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import scoped_session, sessionmaker
+from dallinger.networks import DiscreteGenerational
 
 from . import distributions
 from .bots import Bot
@@ -111,6 +112,7 @@ GU_PARAMS = {
     "num_recruits": int,
     "state_interval": float,
     "public_knowledge": bool,
+    "max_chain": int,
 }
 
 DEFAULT_ITEM_CONFIG = {
@@ -181,6 +183,7 @@ class Gridworld(object):
 
         # Players
         self.num_players = kwargs.get("max_participants", 3)
+        self.max_chain = kwargs.get("max_chain", 2)
 
         # Rounds
         self.num_rounds = kwargs.get("num_rounds", 1)
@@ -1146,6 +1149,7 @@ class Griduniverse(Experiment):
     def configure(self):
         super(Griduniverse, self).configure()
         self.num_participants = self.config.get("max_participants", 3)
+        self.max_chain = self.config.get("max_chain", 2)
         self.quorum = self.num_participants
         self.initial_recruitment_size = self.config.get(
             "num_recruits", self.num_participants
@@ -1222,8 +1226,13 @@ class Griduniverse(Experiment):
 
     def create_network(self):
         """Create a new network by reading the configuration file."""
-        class_ = getattr(dallinger.networks, self.network_factory)
-        return class_(max_size=self.num_participants + 1)
+        # class_ = getattr(dallinger.networks, self.network_factory)
+        # return class_(max_size=self.num_participants + 1)
+        return DiscreteGenerational(
+            generations=self.max_chain,
+            generation_size=self.num_participants + 1,
+            initial_source=False
+        )
 
     def create_node(self, participant, network):
         try:
@@ -1780,6 +1789,7 @@ class Griduniverse(Experiment):
 
             self.publish(message)
             if self.grid.game_over:
+                # TODO: call a function to display final knowledge transmission page 
                 return
 
     def game_loop(self):

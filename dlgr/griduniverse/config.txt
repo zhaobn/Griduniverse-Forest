@@ -3,6 +3,7 @@ mode = debug
 auto_recruit = true
 network = FullyConnected
 max_participants = 1
+max_chain = 2
 num_rounds = 1
 time_per_round = 1000
 block_size = 20
