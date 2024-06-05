@@ -1085,7 +1085,27 @@
       // Find item sprite from game config and add to row
       cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item);
       cellCalories.innerHTML = msg.calories;
-    } 
+
+      // Sort the table
+      let tbody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
+      let rows = Array.from(tbody.getElementsByTagName('tr'))
+      const rowData = rows.map(row => {
+        const cells = row.getElementsByTagName('td');
+        return {
+          element: row,
+          item: cells[0].innerText,
+          calories: parseInt(cells[1].innerText, 10)
+        };
+      });
+      rowData.sort((a, b) => b.calories - a.calories);
+      while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+      }
+      rowData.forEach(data => {
+        tbody.appendChild(data.element);
+      });
+
+    }
   }
 
   function onDiscoveringTransition(msg) {
