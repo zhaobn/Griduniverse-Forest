@@ -112,7 +112,6 @@ GU_PARAMS = {
     "num_recruits": int,
     "state_interval": float,
     "public_knowledge": bool,
-    "max_chain": int,
 }
 
 DEFAULT_ITEM_CONFIG = {
@@ -183,7 +182,6 @@ class Gridworld(object):
 
         # Players
         self.num_players = kwargs.get("max_participants", 3)
-        self.max_chain = kwargs.get("max_chain", 2)
 
         # Rounds
         self.num_rounds = kwargs.get("num_rounds", 1)
@@ -1149,7 +1147,6 @@ class Griduniverse(Experiment):
     def configure(self):
         super(Griduniverse, self).configure()
         self.num_participants = self.config.get("max_participants", 3)
-        self.max_chain = self.config.get("max_chain", 2)
         self.quorum = self.num_participants
         self.initial_recruitment_size = self.config.get(
             "num_recruits", self.num_participants
@@ -1225,14 +1222,10 @@ class Griduniverse(Experiment):
         ]
 
     def create_network(self):
+        # DO NOT SEEM TO WORK
         """Create a new network by reading the configuration file."""
-        # class_ = getattr(dallinger.networks, self.network_factory)
-        # return class_(max_size=self.num_participants + 1)
-        return DiscreteGenerational(
-            generations=self.max_chain,
-            generation_size=self.num_participants + 1,
-            initial_source=False
-        )
+        class_ = getattr(dallinger.networks, self.network_factory)
+        return class_(max_size=self.num_participants + 1)
 
     def create_node(self, participant, network):
         try:
@@ -1242,6 +1235,7 @@ class Griduniverse(Experiment):
                 # If there are no spaces left in our networks we can close
                 # recruitment, to alleviate problems of over-recruitment
                 self.recruiter().close_recruitment()
+
 
     def setup(self):
         """Setup the networks."""
@@ -1683,7 +1677,7 @@ class Griduniverse(Experiment):
                 other_player.score += per_player
             player.score += per_player
             player.score += transition_calories % (len(neighbors) + 1)
-        
+
         if self.grid.public_knowledge:
             uniquetransition = (transition["actor_start"], transition["target_start"])
             if not uniquetransition in self.grid.discovered_transitions:
@@ -1789,7 +1783,7 @@ class Griduniverse(Experiment):
 
             self.publish(message)
             if self.grid.game_over:
-                # TODO: call a function to display final knowledge transmission page 
+                # TODO: call a function to display final knowledge transmission page
                 return
 
     def game_loop(self):
