@@ -22272,7 +22272,7 @@ var require;/*global dallinger, store */
   }
 
   function onDiscoveringItem(msg) {
-    if ((settings.public_knowledge) | (msg.player_id == players.ego_id)) {
+    if ((msg.public) | (msg.player_id == players.ego_id)) {
       // Find table on dashboard and insert new row
       const tableBody = document.getElementById('reward-table').getElementsByTagName('tbody')[0];
       let row = tableBody.insertRow();
@@ -22306,7 +22306,7 @@ var require;/*global dallinger, store */
   }
 
   function onDiscoveringTransition(msg) {
-    if ((settings.public_knowledge) | (msg.player_id == players.ego_id)) {
+    if ((msg.public) | (msg.player_id == players.ego_id)) {
       const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
       let row = tableBody.insertRow();
       let cellTransitions = row.insertCell(0);
