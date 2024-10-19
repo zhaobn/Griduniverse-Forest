@@ -26,10 +26,10 @@ item_defaults:
   planting_cost: 1
   probability_distribution: "center_bias"
   public_good_multiplier: 0.0
-  respawn: false
+  respawn: true
   limit_quantity: false
   seasonal_growth_rate: 1.0
-  spawn_rate: 0
+  spawn_rate: 1
   sprite: "color:#8a9b0f,#7a6b54" # ("image:sprites/strawberry.png"), "emoji:🍓", "color:#8a9b0f"
 
 transition_defaults:
@@ -42,55 +42,114 @@ transition_defaults:
   modify_uses: [0, 0]
 
 items:
-  - sprite: "emoji:💙"
-    name: Blue Heart
-    item_id: blue_heart
+  - sprite: "emoji:🍈"
+    name: melon
+    item_id: melon
     calories: 1
-    item_count: 4
-
-  - sprite: "emoji:🩷"
-    name: Pink Heart
-    item_id: pink_heart
+    item_count: 10
+  - sprite: "emoji:🍐"
+    name: melon_1
+    item_id: melon_1
     calories: 1
-    item_count: 4
-
-  - sprite: "emoji:💛"
-    name: Yellow Heart
-    item_id: yellow_heart
+    item_count: 0
+  - sprite: "emoji:🍋"
+    name: melon_2
+    item_id: melon_2
     calories: 1
-    item_count: 4
-
-  - sprite: "emoji:💚"
-    name: Green Heart
-    item_id: green_heart
-    calories: 1
-    item_count: 4
-
-  - sprite: "emoji:🌼"
-    name: Yellow Flower
-    item_id: yellow_flower
+    item_count: 0
+  - sprite: "emoji:🍊"
+    name: melon_3
+    item_id: melon_3
     calories: 10
-  - sprite: "emoji:🌸"
-    name: Pink Flower
-    item_id: pink_flower
-    calories: 10
+    item_count: 0
 
-  - sprite: "emoji:⭐️"
-    name: Yellow Star
-    item_id: yellow_star
-    calories: 100
+  - sprite: "emoji:🫐"
+    name: blueberry
+    item_id: blueberry
+    calories: 1
+    item_count: 4
+  - sprite: "emoji:🍇"
+    name: grapes
+    item_id: grapes
+    calories: 10
+    item_count: 0
+
+
+  - sprite: "emoji:🪨"
+    name: rock
+    item_id: rock
+    item_count: 2
+  - sprite: "emoji:💧"
+    name: water
+    item_id: water
+    item_count: 2
+  - sprite: "emoji:🌿	"
+    name: herb
+    item_id: herb
+    item_count: 2
+
+  - sprite: "emoji:🪄	"
+    name: magic
+    item_id: magic
+    item_count: 1
+  - sprite: "emoji:⭐ "
+    name: magic_1
+    item_id: magic_1
+    item_count: 0
+  - sprite: "emoji:🌟	"
+    name: magic_2
+    item_id: magic_2
+    item_count: 0
+
+  - sprite: "emoji:✅"
+    name: check
+    item_id: check
+    item_count: 0
 
 
 transitions:
 
-  - actor_start: blue_heart
-    target_start: pink_heart
-    target_end: pink_flower
+  - actor_start: rock
+    target_start: melon
+    target_end: melon_1
+    modify_uses: [1, 0]
 
-  - actor_start: green_heart
-    target_start: yellow_heart
-    target_end: yellow_flower
+  - actor_start: water
+    target_start: melon_1
+    target_end: melon_2
 
-  - actor_start: pink_flower
-    target_start: yellow_flower
-    target_end: yellow_star
+  - actor_start: herb
+    target_start: melon_2
+    target_end: melon_3
+
+  - actor_start: magic
+    target_start: melon
+    target_end: melon_1
+
+  - actor_start: water
+    target_start: melon_1
+    target_end: melon_2
+
+  - actor_start: rock
+    target_start: magic
+    target_end: magic_1
+
+  - actor_start: water
+    target_start: magic_1
+    target_end: magic_2
+
+  - actor_start: herb
+    target_start: magic_2
+    target_end: check
+
+  - actor_start: check
+    actor_end: check
+    target_start: melon
+    target_end: melon_3
+    modify_uses: [1, 0]
+
+  - actor_start: check
+    actor_end: check
+    target_start: blueberry
+    target_end: grapes
+    modify_uses: [1, 0]
