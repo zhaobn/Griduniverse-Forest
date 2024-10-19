@@ -1,5 +1,5 @@
 .container {
-    max-width: 60rem !important;
+    max-width: 80rem !important;
     margin-top: 4rem !important;
 }
 
@@ -37,10 +37,10 @@ thead tr th {
 table.scrolldown tbody {
 
     /* Set the height of table body */
-    height: 20vh;
+    height: 30vh;
 
     /* Set vertical scroll */
-    overflow-y: auto;
+    overflow-y: scroll;
 
     /* Hide the horizontal scroll */
     overflow-x: hidden;
@@ -49,6 +49,7 @@ table.scrolldown tbody {
 thead th {
     width: 200px;
 } */
+
 
 .recipes {
     width: 25vw;

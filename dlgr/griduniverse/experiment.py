@@ -112,6 +112,8 @@ GU_PARAMS = {
     "num_recruits": int,
     "state_interval": float,
     "public_knowledge": bool,
+    "show_found_recipes": bool,
+    "show_item_points": bool,
 }
 
 DEFAULT_ITEM_CONFIG = {
@@ -227,7 +229,11 @@ class Gridworld(object):
         self.identity_signaling = kwargs.get("identity_signaling", False)
         self.identity_starts_visible = kwargs.get("identity_starts_visible", False)
         self.use_identicons = kwargs.get("use_identicons", False)
+
+        # Inventory
         self.public_knowledge = kwargs.get("public_knowledge", True)
+        self.show_found_recipes = kwargs.get("show_found_recipes", True)
+        self.show_item_points = kwargs.get("show_item_points", True)
 
         # Walls
         self.walls_visible = kwargs.get("walls_visible", True)
@@ -1544,7 +1550,7 @@ class Griduniverse(Experiment):
             for player_to in self.grid.players.values():
                 player_to.score += player_item.public_good
 
-        if self.grid.public_knowledge:
+        if self.grid.public_knowledge or self.grid.show_item_points:
             if not player_item.item_id in self.grid.discovered_rewards:
                 self.grid.discovered_rewards[player_item.item_id] = player_item.calories
 
@@ -1680,7 +1686,7 @@ class Griduniverse(Experiment):
             player.score += per_player
             player.score += transition_calories % (len(neighbors) + 1)
 
-        if self.grid.public_knowledge:
+        if self.grid.public_knowledge or self.grid.show_found_recipes:
             uniquetransition = (transition["actor_start"], transition["target_start"])
             if not uniquetransition in self.grid.discovered_transitions:
                 self.grid.discovered_transitions[uniquetransition] = transition["target_end"]

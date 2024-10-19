@@ -46,7 +46,7 @@ items:
     name: melon
     item_id: melon
     calories: 1
-    item_count: 10
+    item_count: 50
   - sprite: "emoji:🍐"
     name: melon_1
     item_id: melon_1
@@ -67,7 +67,7 @@ items:
     name: blueberry
     item_id: blueberry
     calories: 1
-    item_count: 4
+    item_count: 40
   - sprite: "emoji:🍇"
     name: grapes
     item_id: grapes
@@ -78,20 +78,20 @@ items:
   - sprite: "emoji:🪨"
     name: rock
     item_id: rock
-    item_count: 2
+    item_count: 20
   - sprite: "emoji:💧"
     name: water
     item_id: water
-    item_count: 2
+    item_count: 20
   - sprite: "emoji:🌿	"
     name: herb
     item_id: herb
-    item_count: 2
+    item_count: 20
 
   - sprite: "emoji:🪄	"
     name: magic
     item_id: magic
-    item_count: 1
+    item_count: 10
   - sprite: "emoji:⭐ "
     name: magic_1
     item_id: magic_1

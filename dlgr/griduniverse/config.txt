@@ -5,16 +5,18 @@ network = FullyConnected
 max_participants = 1
 num_rounds = 1
 time_per_round = 200
-block_size = 20
-columns = 20
-rows = 20
+block_size = 30
+columns = 100
+rows = 100
 window_rows = 20
 window_columns = 20
 use_identicons = true
-show_chatroom = true
+show_chatroom = false
+others_visible = false
 recruiter = hotair
-public_knowledge = true
-others_visible = true
+public_knowledge = false
+show_found_recipes = true
+show_item_points = true
 
 [HIT Configuration]
 title = Griduniverse
