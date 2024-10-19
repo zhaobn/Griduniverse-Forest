@@ -29,7 +29,7 @@ item_defaults:
   respawn: true
   limit_quantity: false
   seasonal_growth_rate: 1.0
-  spawn_rate: 1
+  spawn_rate: 0
   sprite: "color:#8a9b0f,#7a6b54" # ("image:sprites/strawberry.png"), "emoji:🍓", "color:#8a9b0f"
 
 transition_defaults:
@@ -42,114 +42,234 @@ transition_defaults:
   modify_uses: [0, 0]
 
 items:
-  - sprite: "emoji:🍈"
-    name: melon
-    item_id: melon
+  - sprite: "emoji:🔴"
+    name: red_1
+    item_id: red_1
     calories: 1
-    item_count: 50
-  - sprite: "emoji:🍐"
-    name: melon_1
-    item_id: melon_1
+    item_count: 4
+  - sprite: "emoji:🔺"
+    name: red_2
+    item_id: red_2
     calories: 1
+    item_count: 4
+  - sprite: "emoji:♦️"
+    name: red_3
+    item_id: red_3
+    calories: 1
+    item_count: 4
+  - sprite: "emoji:❤️"
+    name: red_4
+    item_id: red_4
+    calories: 1
+    item_count: 4
+  - sprite: "emoji:🟥"
+    name: red_5
+    item_id: red_5
+    calories: 1
+    item_count: 4
+
+  - sprite: "emoji:🟤"
+    name: brown_1
+    item_id: brown_1
+    calories: 10
     item_count: 0
-  - sprite: "emoji:🍋"
-    name: melon_2
-    item_id: melon_2
-    calories: 1
+  - sprite: "emoji:🌰"
+    name: brown_2
+    item_id: brown_2
+    calories: 10
     item_count: 0
-  - sprite: "emoji:🍊"
-    name: melon_3
-    item_id: melon_3
+  - sprite: "emoji:📦"
+    name: brown_3
+    item_id: brown_3
+    calories: 10
+    item_count: 0
+  - sprite: "emoji:🤎"
+    name: brown_4
+    item_id: brown_4
+    calories: 10
+    item_count: 0
+  - sprite: "emoji:🟫"
+    name: brown_5
+    item_id: brown_5
     calories: 10
     item_count: 0
 
-  - sprite: "emoji:🫐"
-    name: blueberry
-    item_id: blueberry
-    calories: 1
-    item_count: 40
-  - sprite: "emoji:🍇"
-    name: grapes
-    item_id: grapes
-    calories: 10
+  - sprite: "emoji:🟠"
+    name: orange_1
+    item_id: orange_1
+    calories: 20
+    item_count: 0
+  - sprite: "emoji:💥"
+    name: orange_2
+    item_id: orange_2
+    calories: 20
+    item_count: 0
+  - sprite: "emoji:☢️"
+    name: orange_3
+    item_id: orange_3
+    calories: 20
+    item_count: 0
+  - sprite: "emoji:🧡"
+    name: orange_4
+    item_id: orange_4
+    calories: 20
+    item_count: 0
+  - sprite: "emoji:🟧"
+    name: orange_5
+    item_id: orange_5
+    calories: 20
     item_count: 0
 
-
-  - sprite: "emoji:🪨"
-    name: rock
-    item_id: rock
-    item_count: 20
-  - sprite: "emoji:💧"
-    name: water
-    item_id: water
-    item_count: 20
-  - sprite: "emoji:🌿	"
-    name: herb
-    item_id: herb
-    item_count: 20
-
-  - sprite: "emoji:🪄	"
-    name: magic
-    item_id: magic
-    item_count: 10
-  - sprite: "emoji:⭐ "
-    name: magic_1
-    item_id: magic_1
+  - sprite: "emoji:🟢"
+    name: green_1
+    item_id: green_1
+    calories: 40
     item_count: 0
-  - sprite: "emoji:🌟	"
-    name: magic_2
-    item_id: magic_2
+  - sprite: "emoji:❇️"
+    name: green_2
+    item_id: green_2
+    calories: 40
+    item_count: 0
+  - sprite: "emoji:🍀"
+    name: green_3
+    item_id: green_3
+    calories: 40
+    item_count: 0
+  - sprite: "emoji:💚"
+    name: green_4
+    item_id: green_4
+    calories: 40
+    item_count: 0
+  - sprite: "emoji:🟩"
+    name: green_5
+    item_id: green_5
+    calories: 40
     item_count: 0
 
-  - sprite: "emoji:✅"
-    name: check
-    item_id: check
+  - sprite: "emoji:🔵"
+    name: blue_1
+    item_id: blue_1
+    calories: 80
     item_count: 0
+  - sprite: "emoji:💠"
+    name: blue_2
+    item_id: blue_2
+    calories: 80
+    item_count: 0
+  - sprite: "emoji:❄️"
+    name: blue_3
+    item_id: blue_3
+    calories: 80
+    item_count: 0
+  - sprite: "emoji:💙"
+    name: blue_4
+    item_id: blue_4
+    calories: 80
+    item_count: 0
+  - sprite: "emoji:🟦"
+    name: blue_5
+    item_id: blue_5
+    calories: 80
+    item_count: 0
+
+  - sprite: "emoji:⚪️"
+    name: white_1
+    item_id: white_1
+    calories: 160
+    item_count: 0
+  - sprite: "emoji:"
+    name: white_2
+    item_id: white_2
+    calories: 160
+    item_count: 0
+  - sprite: "emoji:🪽"
+    name: white_3
+    item_id: white_3
+    calories: 160
+    item_count: 0
+  - sprite: "emoji:🤍"
+    name: white_4
+    item_id: white_4
+    calories: 160
+    item_count: 0
+  - sprite: "emoji:⬜️"
+    name: white_5
+    item_id: white_5
+    calories: 160
+    item_count: 0
+
 
 
 transitions:
 
-  - actor_start: rock
-    target_start: melon
-    target_end: melon_1
-    modify_uses: [1, 0]
+  - actor_start: red_1
+    target_start: red_2
+    target_end: orange_1
 
-  - actor_start: water
-    target_start: melon_1
-    target_end: melon_2
+  - actor_start: red_4
+    target_start: red_2
+    target_end: orange_4
 
-  - actor_start: herb
-    target_start: melon_2
-    target_end: melon_3
+  - actor_start: red_5
+    target_start: red_4
+    target_end: orange_5
 
-  - actor_start: magic
-    target_start: melon
-    target_end: melon_1
+  - actor_start: orange_1
+    target_start: orange_4
+    target_end: brown_1
 
-  - actor_start: water
-    target_start: melon_1
-    target_end: melon_2
+  - actor_start: orange_4
+    target_start: orange_1
+    target_end: brown_4
 
-  - actor_start: rock
-    target_start: magic
-    target_end: magic_1
+  - actor_start: orange_5
+    target_start: orange_3
+    target_end: brown_5
 
-  - actor_start: water
-    target_start: magic_1
-    target_end: magic_2
+  - actor_start: brown_1
+    target_start: brown_3
+    target_end: yellow_1
 
-  - actor_start: herb
-    target_start: magic_2
-    target_end: check
+  - actor_start: brown_4
+    target_start: brown_3
+    target_end: yellow_4
 
-  - actor_start: check
-    actor_end: check
-    target_start: melon
-    target_end: melon_3
-    modify_uses: [1, 0]
+  - actor_start: brown_5
+    target_start: brown_2
+    target_end: yellow_5
 
-  - actor_start: check
-    actor_end: check
-    target_start: blueberry
-    target_end: grapes
-    modify_uses: [1, 0]
+  - actor_start: yellow_1
+    target_start: yellow_1
+    target_end: green_1
+
+  - actor_start: yellow_4
+    target_start: yellow_2
+    target_end: green_4
+
+  - actor_start: yellow_5
+    target_start: yellow_3
+    target_end: green_5
+
+  - actor_start: green_1
+    target_start: green_5
+    target_end: blue_1
+
+  - actor_start: green_4
+    target_start: green_5
+    target_end: blue_4
+
+  - actor_start: green_5
+    target_start: green_5
+    target_end: blue_5
+
+  - actor_start: blue_1
+    target_start: blue_4
+    target_end: white_1
+
+  - actor_start: blue_4
+    target_start: blue_2
+    target_end: white_4
+
+  - actor_start: blue_5
+    target_start: blue_3
+    target_end: white_5
