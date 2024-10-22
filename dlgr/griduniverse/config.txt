@@ -17,6 +17,7 @@ recruiter = hotair
 public_knowledge = false
 show_found_recipes = true
 show_item_points = true
+game_over_cond = 10
 
 [HIT Configuration]
 title = Griduniverse

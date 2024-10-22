@@ -114,6 +114,7 @@ GU_PARAMS = {
     "public_knowledge": bool,
     "show_found_recipes": bool,
     "show_item_points": bool,
+    "game_over_cond": int,
 }
 
 DEFAULT_ITEM_CONFIG = {
@@ -294,6 +295,9 @@ class Gridworld(object):
         self.start_timestamp = kwargs.get("start_timestamp", None)
         self.discovered_rewards = {}
         self.discovered_transitions = {}
+        self.failed_transitions = {}
+        self.num_actions = 0
+        self.game_over_cond = kwargs.get("game_over_cond", 10)
 
         self.round = 0
 
@@ -544,7 +548,8 @@ class Gridworld(object):
 
     @property
     def game_over(self):
-        return self.round >= self.num_rounds
+        # return self.round >= self.num_rounds
+        return self.num_actions >= self.game_over_cond
 
     def serialize(self, include_walls=True, include_items=True):
         grid_data = {
@@ -1539,6 +1544,7 @@ class Griduniverse(Experiment):
         if not player_item.remaining_uses:
             self.grid.items_consumed.append(player_item)
             player.current_item = None
+            self.grid.num_actions += 1
 
         if player.color_idx > 0:
             calories = player_item.calories
@@ -1605,6 +1611,7 @@ class Griduniverse(Experiment):
         position = tuple(msg["position"])
         location_item = self.grid.item_locations.get(position)
         transition = None
+        self.grid.num_actions += 1
 
         actor_key = player_item and player_item.item_id
         target_key = location_item and location_item.item_id
@@ -1688,7 +1695,25 @@ class Griduniverse(Experiment):
 
         if self.grid.public_knowledge or self.grid.show_found_recipes:
             uniquetransition = (transition["actor_start"], transition["target_start"])
-            if not uniquetransition in self.grid.discovered_transitions:
+            
+            # Transition failed if items are the same as they were originally. 
+            if ((not uniquetransition in self.grid.failed_transitions) and (transition["actor_start"] == transition["actor_end"] and transition["target_start"] == transition["target_end"])):
+                self.grid.failed_transitions[uniquetransition] = transition["target_end"]
+
+                message = {
+                    "type": "unique_transition",
+                    "item1": transition["actor_start"],
+                    "item2": transition["target_start"],
+                    "resultitem": transition["target_end"],
+                    "player_id": player.id,
+                    "public": True,
+                    "visible": "failed"
+                }
+                print(message)
+
+                self.publish(message)
+
+            elif (not uniquetransition in self.grid.discovered_transitions) and (not uniquetransition in self.grid.failed_transitions):
                 self.grid.discovered_transitions[uniquetransition] = transition["target_end"]
 
                 message = {
@@ -1697,8 +1722,10 @@ class Griduniverse(Experiment):
                     "item2": transition["target_start"],
                     "resultitem": transition["target_end"],
                     "player_id": player.id,
-                    "public": True
+                    "public": True,
+                    "visible": "discovered"
                 }
+                print(message)
 
                 self.publish(message)
         else:

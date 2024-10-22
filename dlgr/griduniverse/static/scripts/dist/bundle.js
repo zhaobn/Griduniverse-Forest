@@ -21685,6 +21685,8 @@ var require;/*global dallinger, store */
 
   var startTime = performance.now();
 
+  let transitionHistory = new Map(); // storing failed and discovered transitions for hint
+
   pixels.frame(function () {
     // Update the background.
     var ego = players.ego(),
@@ -21726,7 +21728,7 @@ var require;/*global dallinger, store */
     // a square with, if any:
     if (!_.isUndefined(ego)) {
       updateItemAtMyLocationDisplay(ego, gridItems);
-      updateAvailableTransitionsDisplay(ego);
+      updateAvailableTransitionsDisplay(ego, transitionHistory);
       updateMyInventoryDisplay(ego);
     }
 
@@ -22169,44 +22171,39 @@ var require;/*global dallinger, store */
     settings.donation_active = donation_is_active;
   }
 
-  function renderTransition(transition) {
-    if (!transition) {
-      return "";
-    }
-    const transitionVisibility = transition.transition.visible;
-    const states = [
-      transition.transition.actor_start,
-      transition.transition.actor_end,
-      transition.transition.target_start,
-      transition.transition.target_end,
-    ];
+  function updateAvailableTransitionsDisplay(egoPlayer, transitionHistory) {
+    const transition = egoPlayer.getTransition();
+    const $element = $("#transition-details");
 
-    const [aStartItem, aEndItem, tStartItem, tEndItem] = states.map(
-      (state) => settings.item_config[state],
-    );
-
-    const aStartItemString = `✋${aStartItem ? replaceItemNameWithEmoji(aStartItem.item_id) : "⬜"}`;
-    const tStartItemString = tStartItem ? replaceItemNameWithEmoji(tStartItem.item_id) : "⬜";
-    if (transitionVisibility == "never") {
-      return `${aStartItemString} + ${tStartItemString}`;
-    }
-
-    if (transitionVisibility == "seen" && !transitionsUsed.has(transition.id)) {
-      var aEndItemString = "✋❓";
-      var tEndItemString = "❓";
+    if (transition) {
+        const transitionKey = `${transition.transition.actor_start}-${transition.transition.target_start}`;
+        if (transitionHistory.has(transitionKey)) {
+          hint = renderTransition(transition, transitionHistory.get(transitionKey));
+          console.log("Hint: " + hint)
+          $element.html(hint);
+        } else {
+          $element.html("You've never seen these items combined 🤔");
+        }
     } else {
-      aEndItemString = `✋${aEndItem ? replaceItemNameWithEmoji(aEndItem.item_id) : "⬜"}`;
-      tEndItemString = tEndItem ? replaceItemNameWithEmoji(tEndItem.item_id) : "⬜";
+        $element.empty();
     }
-    var actors_info = "";
-    const required_actors = transition.transition.required_actors;
-    // The total number of actors is the number of adjacent players plus one for ego (the current player)
-    const neighboringActors = players.getAdjacentPlayers().length + 1;
-    if (neighboringActors < required_actors) {
-      actors_info = ` - not available: ${required_actors - neighboringActors} more players needed`;
     }
-    return `${aStartItemString} + ${tStartItemString} → ${aEndItemString} + ${tEndItemString}${actors_info}`;
-  }
+
+  function renderTransition(transition, transitionOutcome) {
+      if (!transition) {
+          return "";
+      }
+
+      console.log("Transition outcome: " + transitionOutcome);
+
+      if (!transitionOutcome) {
+        return `You've never tried this combination before 🤔`;
+      } else if (transitionOutcome === 'fail') {
+        return `Last time you tried this combination, it failed ❌`;
+      } else {
+        return `Last time you tried this combination, it worked! 👏🏻`;
+      }
+    }
 
   /**
    * If the current player is sharing a grid position with an interactive
@@ -22231,20 +22228,17 @@ var require;/*global dallinger, store */
    *
    * @param {Player} egoPlayer the current Player
    */
-  function updateAvailableTransitionsDisplay(egoPlayer) {
+  function updateAvailableTransitionsDisplay(egoPlayer, transitionHistory) {
     const transition = egoPlayer.getTransition();
     const $element = $("#transition-details");
 
     if (transition) {
-      $element.html(renderTransition(transition));
-    } else {
-      // If we're holding an item with calories, indicate that we might
-      // want to consume it.
-      if (egoPlayer.currentItem && egoPlayer.currentItem.calories) {
-        $element.html(`✋${replaceItemNameWithEmoji(egoPlayer.currentItem.item_id)} + 😋`);
-      } else {
-        $element.empty();
+      const transitionKey = `${transition.transition.actor_start}-${transition.transition.target_start}`;
+      $element.html(renderTransition(transition, transitionHistory.get(transitionKey))); 
       }
+    else {
+      console.log("empty");
+      $element.empty();
     }
   }
 
@@ -22310,7 +22304,17 @@ var require;/*global dallinger, store */
       const tableBody = document.getElementById('recipe-table').getElementsByTagName('tbody')[0];
       let row = tableBody.insertRow();
       let cellTransitions = row.insertCell(0);
-      cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+      const transitionKey = `${msg.item1}-${msg.item2}`;
+
+      console.log(msg.visible);
+
+      if (msg.visible == "failed") {
+        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ❌`;
+        transitionHistory.set(transitionKey, "fail"); 
+      } else if (msg.visible == "discovered") {
+        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+        transitionHistory.set(transitionKey, "success");
+      } 
     }
   }
 
@@ -22544,6 +22548,7 @@ var require;/*global dallinger, store */
         unique_transition: onDiscoveringTransition,
       },
     };
+
     const socket = new socketlib.GUSocket(socketSettings);
 
     socket.open().done(function () {
