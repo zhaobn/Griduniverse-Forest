@@ -1565,7 +1565,8 @@ class Griduniverse(Experiment):
                     "item": player_item.item_id,
                     "calories": player_item.calories,
                     "player_id": player.id,
-                    "public": True
+                    "public": True,
+                    "action_id": self.grid.num_actions
                 }
 
                 self.publish(message)
@@ -1580,7 +1581,8 @@ class Griduniverse(Experiment):
                     "item": player_item.item_id,
                     "calories": player_item.calories,
                     "player_id": player.id,
-                    "public": False
+                    "public": False,
+                    "action_id": self.grid.num_actions
                 }
 
                 self.publish(message)
@@ -1695,8 +1697,8 @@ class Griduniverse(Experiment):
 
         if self.grid.public_knowledge or self.grid.show_found_recipes:
             uniquetransition = (transition["actor_start"], transition["target_start"])
-            
-            # Transition failed if items are the same as they were originally. 
+
+            # Transition failed if items are the same as they were originally.
             if ((not uniquetransition in self.grid.failed_transitions) and (transition["actor_start"] == transition["actor_end"] and transition["target_start"] == transition["target_end"])):
                 self.grid.failed_transitions[uniquetransition] = transition["target_end"]
 
@@ -1707,7 +1709,8 @@ class Griduniverse(Experiment):
                     "resultitem": transition["target_end"],
                     "player_id": player.id,
                     "public": True,
-                    "visible": "failed"
+                    "visible": "failed",
+                    "action_id": self.grid.num_actions
                 }
                 print(message)
 
@@ -1723,7 +1726,8 @@ class Griduniverse(Experiment):
                     "resultitem": transition["target_end"],
                     "player_id": player.id,
                     "public": True,
-                    "visible": "discovered"
+                    "visible": "discovered",
+                    "action_id": self.grid.num_actions
                 }
                 print(message)
 
@@ -1741,7 +1745,8 @@ class Griduniverse(Experiment):
                     "item2": transition["target_start"],
                     "resultitem": transition["target_end"],
                     "player_id": player.id,
-                    "public": False
+                    "public": False,
+                    "action_id": self.grid.num_actions
                 }
 
                 self.publish(message)
@@ -1815,6 +1820,7 @@ class Griduniverse(Experiment):
                 "grid": json.dumps(grid_state),
                 "count": count,
                 "remaining_time": self.grid.remaining_round_time,
+                "action_count": self.grid.num_actions,
                 "round": self.grid.round,
             }
 

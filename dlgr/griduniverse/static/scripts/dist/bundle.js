@@ -22234,7 +22234,7 @@ var require;/*global dallinger, store */
 
     if (transition) {
       const transitionKey = `${transition.transition.actor_start}-${transition.transition.target_start}`;
-      $element.html(renderTransition(transition, transitionHistory.get(transitionKey))); 
+      $element.html(renderTransition(transition, transitionHistory.get(transitionKey)));
       }
     else {
       console.log("empty");
@@ -22310,11 +22310,11 @@ var require;/*global dallinger, store */
 
       if (msg.visible == "failed") {
         cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ❌`;
-        transitionHistory.set(transitionKey, "fail"); 
+        transitionHistory.set(transitionKey, "fail");
       } else if (msg.visible == "discovered") {
         cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
         transitionHistory.set(transitionKey, "success");
-      } 
+      }
     }
   }
 
@@ -22339,7 +22339,10 @@ var require;/*global dallinger, store */
     }
 
     // Update remaining time.
-    $timeElement.html(Math.max(Math.round(msg.remaining_time), 0));
+    // $timeElement.html(Math.max(Math.round(msg.remaining_time), 0));
+    // Update remaining number of actions.
+    var remaining_actions = settings.game_over_cond - msg.action_count;
+    $timeElement.html(Math.max(Math.round(remaining_actions), 0));
 
     // Update round.
     if (settings.num_rounds > 1) {
