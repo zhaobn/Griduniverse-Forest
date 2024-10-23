@@ -46,12 +46,12 @@ items:
     name: red_1
     item_id: red_1
     calories: 1
-    item_count: 4
+    item_count: 2
   - sprite: "emoji:🔺"
     name: red_2
     item_id: red_2
     calories: 1
-    item_count: 4
+    item_count: 2
   # - sprite: "emoji:♦️"
   #   name: red_3
   #   item_id: red_3
@@ -61,7 +61,7 @@ items:
     name: red_4
     item_id: red_4
     calories: 1
-    item_count: 4
+    item_count: 2
   # - sprite: "emoji:🟥"
   #   name: red_5
   #   item_id: red_5
@@ -130,11 +130,11 @@ items:
   #   item_id: green_2
   #   calories: 40
   #   item_count: 0
-  # - sprite: "emoji:🍀"
-  #   name: green_3
-  #   item_id: green_3
-  #   calories: 40
-  #   item_count: 0
+  - sprite: "emoji:🍀"
+    name: green_3
+    item_id: green_3
+    calories: 40
+    item_count: 0
   # - sprite: "emoji:💚"
   #   name: green_4
   #   item_id: green_4
@@ -201,47 +201,86 @@ items:
 transitions:
 
   - actor_start: red_1
-    target_start: red_2
-    target_end: red_3
-
-  - actor_start: red_4
-    target_start: red_2
-    target_end: red_1
-
-  - actor_start: red_2
+    actor_end: red_1
     target_start: red_1
-    actor_end: red_2
     target_end: red_1
 
   - actor_start: red_1
-    target_start: red_4
     actor_end: red_1
+    target_start: red_2
+    target_end: green_3
+    modify_uses: [1, 0]
+
+  - actor_start: red_1
+    actor_end: red_1
+    target_start: red_4
     target_end: red_4
 
-  - actor_start: red_4
+  - actor_start: red_1
+    actor_end: red_1
+    target_start: green_3
+    target_end: green_3
+
+  - actor_start: red_2
+    actor_end: red_2
     target_start: red_1
+    target_end: red_1
+
+  - actor_start: red_2
+    actor_end: red_2
+    target_start: red_2
+    target_end: red_2
+
+  - actor_start: red_2
+    actor_end: red_2
+    target_start: red_4
+    target_end: red_4
+
+  - actor_start: red_2
+    actor_end: red_2
+    target_start: green_3
+    target_end: green_3
+
+  - actor_start: red_4
     actor_end: red_4
-    target_end: red_1
-
-  - actor_start: red_2
-    target_start: red_4
-    actor_end: red_2
-    target_end: red_4
-
-  - actor_start: red_1
     target_start: red_1
-    actor_end: red_1
     target_end: red_1
 
-  - actor_start: red_2
+  - actor_start: red_4
+    actor_end: red_4
     target_start: red_2
-    actor_end: red_2
     target_end: red_2
 
   - actor_start: red_4
-    target_start: red_4
     actor_end: red_4
+    target_start: red_4
     target_end: red_4
+
+  - actor_start: red_4
+    actor_end: red_4
+    target_start: green_3
+    target_end: green_3
+
+  - actor_start: green_3
+    actor_end: green_3
+    target_start: red_1
+    target_end: red_1
+
+  - actor_start: green_3
+    actor_end: green_3
+    target_start: red_2
+    target_end: red_2
+
+  - actor_start: green_3
+    actor_end: green_3
+    target_start: red_4
+    target_end: red_4
+
+  - actor_start: green_3
+    actor_end: green_3
+    target_start: green_3
+    target_end: green_3
+
 
   # - actor_start: orange_1
   #   target_start: orange_4
