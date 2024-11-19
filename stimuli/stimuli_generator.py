@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import ListedColormap
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-from matplotlib.patches import Circle, Arc, Rectangle, Patch, Polygon, Ellipse
+from matplotlib.patches import Circle, Arc, Rectangle, Patch, Polygon, Ellipse, PathPatch
 from matplotlib.lines import Line2D
+import matplotlib.path as mpath
 import os
 import random
 
@@ -12,7 +13,7 @@ import yaml
 
 
 # %%
-colors = ["#FF6666", "#000000", "#CC66FF", "#CC66FF", "##300817", "#66CC66"]
+colors = ["#FF6666", "#66CC66", "##66cc66", "#CC66FF", "#300817", "#66CC66"]
 
 def draw_object(shape, pattern='plain', level=0, size=1.0, prefix='', save=True):
   fig, ax = plt.subplots()
@@ -27,15 +28,23 @@ def draw_object(shape, pattern='plain', level=0, size=1.0, prefix='', save=True)
   # Define the main shape
   if shape == 'circle':
     obj = Circle((0.5, 0.5), 0.5 * size, facecolor=color, edgecolor='white', linewidth=1)
+    clip_path = obj
+
   elif shape == 'square':
     obj = Rectangle((0.5 - 0.5 * size, 0.5 - 0.5 * size), size, size, facecolor=color, edgecolor='white', linewidth=1)
+    clip_path = obj
+
   elif shape == 'triangle':
-    obj = Polygon([(0.5, 0.5 + 0.5 * size), (0.5 - 0.5 * size, 0.5 - 0.5 * size), (0.5 + 0.5 * size, 0.5 - 0.5 * size)],
-            closed=True, facecolor=color, edgecolor='white', linewidth=1)
+    vertices = [(0.5, 0.5 + 0.5 * size), (0.5 - 0.5 * size, 0.5 - 0.5 * size), (0.5 + 0.5 * size, 0.5 - 0.5 * size)]
+    obj = Polygon(vertices, closed=True, facecolor=color, edgecolor='white', linewidth=1)
+    clip_path = obj
+
   elif shape == 'diamond':
     scaled_size = size * 0.707
     obj = Rectangle((0.5, 0.5 - 0.5 * size), scaled_size, scaled_size, angle=45,
             facecolor=color, edgecolor='white', linewidth=1)
+    clip_path = obj
+
   else:
     raise ValueError("Unsupported shape type. Choose from 'circle', 'square', 'triangle', or 'diamond'.")
 
@@ -46,17 +55,21 @@ def draw_object(shape, pattern='plain', level=0, size=1.0, prefix='', save=True)
     for x in np.linspace(0.1, 0.9, 5):
       for y in np.linspace(0.1, 0.9, 5):
         dot = Circle((x, y), 0.05 * size, facecolor='white', edgecolor='none', alpha=0.6)
+        dot.set_clip_path(clip_path)
         ax.add_patch(dot)
 
   elif pattern == 'stripes':
     for x in np.linspace(-0.5, 1.5, 10):
       line = Line2D([x, x + 1], [0, 1], color='white', linewidth=20, alpha=0.6)
+      line.set_clip_path(clip_path, ax.transData)
       ax.add_line(line)
 
   elif pattern == 'checkered':
     for x in np.linspace(0.1, 0.9, 5):
       line_vertical = Line2D([x, x], [0, 1], color='white', linewidth=15, alpha=0.6)
       line_horizontal = Line2D([0, 1], [x, x], color='white', linewidth=15, alpha=0.6)
+      line_vertical.set_clip_path(clip_path, ax.transData)
+      line_horizontal.set_clip_path(clip_path, ax.transData)
       ax.add_line(line_vertical)
       ax.add_line(line_horizontal)
 
