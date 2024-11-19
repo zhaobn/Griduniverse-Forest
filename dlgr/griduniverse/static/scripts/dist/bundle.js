@@ -22237,7 +22237,7 @@ var require;/*global dallinger, store */
       $element.html(renderTransition(transition, transitionHistory.get(transitionKey)));
       }
     else {
-      console.log("empty");
+      // console.log("empty");
       $element.empty();
     }
   }
@@ -22250,16 +22250,43 @@ var require;/*global dallinger, store */
   function updateMyInventoryDisplay(egoPlayer) {
     const item = egoPlayer.currentItem;
     const displayValue = item ? item.item_id : "";
-    $("#inventory-item").text(replaceItemNameWithEmoji(displayValue));
+    $("#inventory-item").html(replaceItemNameWithEmoji(displayValue));
   }
 
-  function replaceItemNameWithEmoji(item) {
+  function replaceItemNameWithEmoji(item, inTable = false) {
     // Function to find item sprite in game config based on item id
     if (item != "") {
       const itemConfig = settings.item_config;
       const itemsArray = Object.values(itemConfig);
       const itemInfo = itemsArray.find((element) => element.item_id == item);
+
+      // Display item according to their type
+      const itemType = itemInfo.sprite.split(':')[0]
+
+      if (itemType == 'image') {
+
+        imageSize = 25
+        imagePath = settings.sprites_url + '/' + itemInfo.sprite.split(':')[1]
+
+        if (inTable) {
+
+          image = '<img src="' + imagePath + '", alt="' + item + '" width="' + imageSize + '" height="' + imageSize + '" >'
+
+        } else {
+
+          image = new Image();
+          image.src = imagePath;
+          image.height = imageSize;
+          image.width = imageSize;
+
+        }
+
+        return image;
+      }
+
       return itemInfo.sprite.substring(6);
+
+
     } else {
       return "";
     }
@@ -22274,7 +22301,7 @@ var require;/*global dallinger, store */
       let cellCalories = row.insertCell(1);
 
       // Find item sprite from game config and add to row
-      cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item);
+      cellSprite.innerHTML = replaceItemNameWithEmoji(msg.item, true);
       cellCalories.innerHTML = msg.calories;
 
       // Sort the table
@@ -22309,10 +22336,10 @@ var require;/*global dallinger, store */
       console.log(msg.visible);
 
       if (msg.visible == "failed") {
-        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ❌`;
+        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1, true)} + ${replaceItemNameWithEmoji(msg.item2, true)} = ❌`;
         transitionHistory.set(transitionKey, "fail");
       } else if (msg.visible == "discovered") {
-        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1)} + ${replaceItemNameWithEmoji(msg.item2)} = ${replaceItemNameWithEmoji(msg.resultitem)}`;
+        cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1, true)} + ${replaceItemNameWithEmoji(msg.item2, true)} = ${replaceItemNameWithEmoji(msg.resultitem, true)}`;
         transitionHistory.set(transitionKey, "success");
       }
     }
