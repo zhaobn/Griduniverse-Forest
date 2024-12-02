@@ -46,82 +46,82 @@ items:
     name: circle_plain_0
     item_id: circle_plain_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/circle_dots_0.svg
     name: circle_dots_0
     item_id: circle_dots_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/circle_stripes_0.svg
     name: circle_stripes_0
     item_id: circle_stripes_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/circle_checkered_0.svg
     name: circle_checkered_0
     item_id: circle_checkered_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/square_plain_0.svg
     name: square_plain_0
     item_id: square_plain_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/square_dots_0.svg
     name: square_dots_0
     item_id: square_dots_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/square_stripes_0.svg
     name: square_stripes_0
     item_id: square_stripes_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/square_checkered_0.svg
     name: square_checkered_0
     item_id: square_checkered_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/triangle_plain_0.svg
     name: triangle_plain_0
     item_id: triangle_plain_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/triangle_dots_0.svg
     name: triangle_dots_0
     item_id: triangle_dots_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/triangle_stripes_0.svg
     name: triangle_stripes_0
     item_id: triangle_stripes_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/triangle_checkered_0.svg
     name: triangle_checkered_0
     item_id: triangle_checkered_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/diamond_plain_0.svg
     name: diamond_plain_0
     item_id: diamond_plain_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/diamond_dots_0.svg
     name: diamond_dots_0
     item_id: diamond_dots_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/diamond_stripes_0.svg
     name: diamond_stripes_0
     item_id: diamond_stripes_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/diamond_checkered_0.svg
     name: diamond_checkered_0
     item_id: diamond_checkered_0
     calories: 1
-    item_count: 1
+    item_count: 2
   - sprite: image:objs/square_plain_1.svg
     name: square_plain_1
     item_id: square_plain_1
@@ -225,10 +225,8 @@ items:
 
 transitions:
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: circle_plain_0
     target_end: circle_plain_1
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: circle_plain_0
@@ -242,10 +240,8 @@ transitions:
     target_start: circle_plain_0
     target_end: circle_plain_0
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: circle_plain_0
     target_end: circle_plain_1
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: circle_plain_0
@@ -259,10 +255,8 @@ transitions:
     target_start: circle_plain_0
     target_end: circle_plain_0
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: circle_plain_0
     target_end: circle_plain_1
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: circle_plain_0
@@ -276,10 +270,8 @@ transitions:
     target_start: circle_plain_0
     target_end: circle_plain_0
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: circle_plain_0
     target_end: circle_plain_1
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: circle_plain_0
@@ -485,10 +477,8 @@ transitions:
     target_start: circle_checkered_0
     target_end: circle_checkered_0
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: square_plain_0
     target_end: square_plain_1
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: square_plain_0
@@ -502,10 +492,8 @@ transitions:
     target_start: square_plain_0
     target_end: square_plain_0
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: square_plain_0
     target_end: square_plain_1
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: square_plain_0
@@ -519,10 +507,8 @@ transitions:
     target_start: square_plain_0
     target_end: square_plain_0
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: square_plain_0
     target_end: square_plain_1
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: square_plain_0
@@ -536,10 +522,8 @@ transitions:
     target_start: square_plain_0
     target_end: square_plain_0
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: square_plain_0
     target_end: square_plain_1
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: square_plain_0
@@ -745,10 +729,8 @@ transitions:
     target_start: square_checkered_0
     target_end: square_checkered_0
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: triangle_plain_0
     target_end: triangle_plain_1
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: triangle_plain_0
@@ -762,10 +744,8 @@ transitions:
     target_start: triangle_plain_0
     target_end: triangle_plain_0
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: triangle_plain_0
     target_end: triangle_plain_1
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: triangle_plain_0
@@ -779,10 +759,8 @@ transitions:
     target_start: triangle_plain_0
     target_end: triangle_plain_0
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: triangle_plain_0
     target_end: triangle_plain_1
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: triangle_plain_0
@@ -796,10 +774,8 @@ transitions:
     target_start: triangle_plain_0
     target_end: triangle_plain_0
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: triangle_plain_0
     target_end: triangle_plain_1
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: triangle_plain_0
@@ -1005,10 +981,8 @@ transitions:
     target_start: triangle_checkered_0
     target_end: triangle_checkered_0
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: diamond_plain_0
     target_end: diamond_plain_1
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: diamond_plain_0
@@ -1022,10 +996,8 @@ transitions:
     target_start: diamond_plain_0
     target_end: diamond_plain_0
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: diamond_plain_0
     target_end: diamond_plain_1
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: diamond_plain_0
@@ -1036,13 +1008,11 @@ transitions:
     target_end: diamond_plain_0
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: diamond_plain
+    target_start: diamond_plain_0
     target_end: diamond_plain_0
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: diamond_plain_0
     target_end: diamond_plain_1
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: diamond_plain_0
@@ -1056,10 +1026,8 @@ transitions:
     target_start: diamond_plain_0
     target_end: diamond_plain_0
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: diamond_plain_0
     target_end: diamond_plain_1
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: diamond_plain_0
@@ -1265,922 +1233,824 @@ transitions:
     target_start: diamond_checkered_0
     target_end: diamond_checkered_0
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: square_plain_1
-    target_end: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: square_plain_1
-    target_end: square_plain_1
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: square_plain_1
-    target_end: square_plain_2
-    modify_uses: [1,0]
+    target_start: triangle_plain_1
+    target_end: triangle_plain_1
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
+  - actor_start: diamond_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
+  - actor_start: square_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
+  - actor_start: circle_plain_1
+    target_start: triangle_plain_1
+    target_end: triangle_plain_2
+  - actor_start: circle_plain_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: square_plain_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: triangle_plain_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: diamond_plain_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: diamond_plain_1
+    target_end: diamond_plain_1
+  - actor_start: triangle_plain_1
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: diamond_plain_1
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: square_plain_1
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: circle_plain_1
+    target_start: diamond_plain_1
+    target_end: diamond_plain_2
+  - actor_start: circle_plain_0
     target_start: square_plain_1
     target_end: square_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: diamond_plain_1
-    target_end: diamond_plain_1
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_1
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: diamond_plain_1
-    target_end: diamond_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: circle_plain_1
-    target_end: circle_plain_1
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
   - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: circle_plain_1
-    target_end: circle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: triangle_plain_1
-    target_end: triangle_plain_1
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: triangle_plain_1
-    target_end: triangle_plain_2
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: square_plain_2
-    target_end: square_plain_2
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: square_plain_2
+    target_start: square_plain_1
     target_end: square_plain_2
   - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
   - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_1
+    target_end: square_plain_2
+  - actor_start: circle_plain_0
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: square_plain_0
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: triangle_plain_0
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: diamond_plain_0
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: circle_plain_1
+    target_end: circle_plain_1
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: square_plain_2
-    target_end: square_plain_3
-    modify_uses: [1,0]
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: diamond_plain_1
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: square_plain_1
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: circle_plain_1
+    target_start: circle_plain_1
+    target_end: circle_plain_2
+  - actor_start: circle_plain_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: square_plain_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: triangle_plain_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: diamond_plain_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: triangle_plain_2
+    target_end: triangle_plain_2
+  - actor_start: triangle_plain_1
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: diamond_plain_1
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: square_plain_1
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: circle_plain_1
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: circle_plain_2
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: diamond_plain_2
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: square_plain_2
+    target_start: triangle_plain_2
+    target_end: triangle_plain_3
+  - actor_start: circle_plain_0
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: square_plain_0
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: triangle_plain_0
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: diamond_plain_0
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: circle_plain_2
+    target_end: circle_plain_2
+  - actor_start: triangle_plain_1
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: diamond_plain_1
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: square_plain_1
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: circle_plain_1
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: triangle_plain_2
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: circle_plain_2
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: diamond_plain_2
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: square_plain_2
+    target_start: circle_plain_2
+    target_end: circle_plain_3
+  - actor_start: circle_plain_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: square_plain_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: triangle_plain_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: diamond_plain_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: diamond_plain_2
+    target_end: diamond_plain_2
+  - actor_start: triangle_plain_1
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: diamond_plain_1
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: square_plain_1
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: circle_plain_1
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: triangle_plain_2
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: circle_plain_2
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: diamond_plain_2
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: square_plain_2
+    target_start: diamond_plain_2
+    target_end: diamond_plain_3
+  - actor_start: circle_plain_0
     target_start: square_plain_2
     target_end: square_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_3
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_3
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_3
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: diamond_plain_2
-    target_end: diamond_plain_2
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_2
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: diamond_plain_1
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: square_plain_1
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: circle_plain_1
+    target_start: square_plain_2
+    target_end: square_plain_3
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: diamond_plain_2
-    target_end: diamond_plain_3
-    modify_uses: [1,0]
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: circle_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: diamond_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_3
+  - actor_start: square_plain_2
+    target_start: square_plain_2
+    target_end: square_plain_3
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: circle_plain_2
-    target_end: circle_plain_2
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_3
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: circle_plain_2
-    target_end: circle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: triangle_plain_2
-    target_end: triangle_plain_2
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: triangle_plain_2
-    target_end: triangle_plain_3
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: square_plain_3
-    target_end: square_plain_3
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: square_plain_3
-    target_end: square_plain_3
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: square_plain_3
-    target_end: square_plain_4
-    modify_uses: [1,0]
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: circle_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: diamond_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: square_plain_2
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: square_plain_3
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: diamond_plain_3
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: circle_plain_3
+    target_start: triangle_plain_3
+    target_end: triangle_plain_4
+  - actor_start: circle_plain_0
     target_start: square_plain_3
     target_end: square_plain_4
-    modify_uses: [1,0]
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: square_plain_0
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: triangle_plain_0
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: diamond_plain_0
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: square_plain_3
+    target_end: square_plain_3
+  - actor_start: triangle_plain_1
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: diamond_plain_1
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: square_plain_1
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: circle_plain_1
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: triangle_plain_2
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: circle_plain_2
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: diamond_plain_2
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: square_plain_2
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: triangle_plain_3
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: square_plain_3
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: diamond_plain_3
+    target_start: square_plain_3
+    target_end: square_plain_4
+  - actor_start: circle_plain_3
+    target_start: square_plain_3
+    target_end: square_plain_4
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: diamond_plain_3
@@ -2194,10 +2064,8 @@ transitions:
     target_start: diamond_plain_3
     target_end: diamond_plain_3
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: diamond_plain_3
@@ -2211,10 +2079,8 @@ transitions:
     target_start: diamond_plain_3
     target_end: diamond_plain_3
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: diamond_plain_3
@@ -2228,10 +2094,8 @@ transitions:
     target_start: diamond_plain_3
     target_end: diamond_plain_3
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: diamond_plain_3
@@ -2244,71 +2108,45 @@ transitions:
     actor_end: diamond_checkered_0
     target_start: diamond_plain_3
     target_end: diamond_plain_3
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: diamond_plain_3
-    target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: diamond_plain_3
-    target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: diamond_plain_3
-    target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
+  - actor_start: diamond_plain_1
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
+  - actor_start: square_plain_1
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
+  - actor_start: circle_plain_1
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
+  - actor_start: circle_plain_2
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
+  - actor_start: diamond_plain_2
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
+  - actor_start: square_plain_2
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
     target_start: diamond_plain_3
     target_end: diamond_plain_4
-    modify_uses: [1,0]
+  - actor_start: square_plain_3
+    target_start: diamond_plain_3
+    target_end: diamond_plain_4
+  - actor_start: diamond_plain_3
+    target_start: diamond_plain_3
+    target_end: diamond_plain_4
+  - actor_start: circle_plain_3
+    target_start: diamond_plain_3
+    target_end: diamond_plain_4
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: circle_plain_3
@@ -2322,10 +2160,8 @@ transitions:
     target_start: circle_plain_3
     target_end: circle_plain_3
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: circle_plain_3
@@ -2339,10 +2175,8 @@ transitions:
     target_start: circle_plain_3
     target_end: circle_plain_3
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: circle_plain_3
@@ -2356,10 +2190,8 @@ transitions:
     target_start: circle_plain_3
     target_end: circle_plain_3
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: circle_plain_3
@@ -2372,495 +2204,369 @@ transitions:
     actor_end: diamond_checkered_0
     target_start: circle_plain_3
     target_end: circle_plain_3
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: circle_plain_3
-    target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: circle_plain_3
-    target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: circle_plain_3
-    target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
+  - actor_start: diamond_plain_1
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
+  - actor_start: square_plain_1
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
+  - actor_start: circle_plain_1
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
+  - actor_start: circle_plain_2
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
+  - actor_start: diamond_plain_2
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
+  - actor_start: square_plain_2
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
     target_start: circle_plain_3
     target_end: circle_plain_4
-    modify_uses: [1,0]
+  - actor_start: square_plain_3
+    target_start: circle_plain_3
+    target_end: circle_plain_4
+  - actor_start: diamond_plain_3
+    target_start: circle_plain_3
+    target_end: circle_plain_4
+  - actor_start: circle_plain_3
+    target_start: circle_plain_3
+    target_end: circle_plain_4
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: triangle_plain_3
+    target_start: triangle_plain_4
     target_end: triangle_plain_4
-    modify_uses: [1,0]
+  - actor_start: square_plain_0
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: triangle_plain_3
+    target_start: triangle_plain_4
     target_end: triangle_plain_4
-    modify_uses: [1,0]
+  - actor_start: triangle_plain_0
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: triangle_plain_3
+    target_start: triangle_plain_4
     target_end: triangle_plain_4
-    modify_uses: [1,0]
+  - actor_start: diamond_plain_0
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_4
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: triangle_plain_3
-    target_end: triangle_plain_3
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: triangle_plain_3
+    target_start: triangle_plain_4
     target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: triangle_plain_3
-    target_end: triangle_plain_4
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: square_plain_4
-    target_end: square_plain_4
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: square_plain_1
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: circle_plain_2
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: diamond_plain_2
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: square_plain_2
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: square_plain_4
-    target_end: square_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: square_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: diamond_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: circle_plain_3
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
   - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: diamond_plain_4
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: square_plain_4
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: circle_plain_4
+    target_start: triangle_plain_4
+    target_end: triangle_plain_5
+  - actor_start: circle_plain_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: square_plain_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: triangle_plain_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: diamond_plain_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: diamond_plain_4
+    target_end: diamond_plain_4
+  - actor_start: triangle_plain_1
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: diamond_plain_1
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: square_plain_1
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_plain_1
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: triangle_plain_2
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_plain_2
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: diamond_plain_2
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: square_plain_2
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: triangle_plain_3
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: square_plain_3
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: diamond_plain_3
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_plain_3
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: triangle_plain_4
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: diamond_plain_4
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: square_plain_4
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_plain_4
+    target_start: diamond_plain_4
+    target_end: diamond_plain_5
+  - actor_start: circle_plain_0
     target_start: square_plain_4
     target_end: square_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: diamond_plain_4
-    target_end: diamond_plain_4
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_4
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: diamond_plain_1
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: square_plain_1
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: circle_plain_1
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: circle_plain_2
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: diamond_plain_2
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: square_plain_2
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: square_plain_3
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: diamond_plain_3
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: circle_plain_3
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: diamond_plain_4
-    target_end: diamond_plain_5
-    modify_uses: [1,0]
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: diamond_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: square_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_5
+  - actor_start: circle_plain_4
+    target_start: square_plain_4
+    target_end: square_plain_5
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
     target_start: circle_plain_4
@@ -2874,10 +2580,8 @@ transitions:
     target_start: circle_plain_4
     target_end: circle_plain_4
   - actor_start: square_plain_0
-    actor_end: square_plain_0
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: square_dots_0
     actor_end: square_dots_0
     target_start: circle_plain_4
@@ -2891,10 +2595,8 @@ transitions:
     target_start: circle_plain_4
     target_end: circle_plain_4
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
     target_start: circle_plain_4
@@ -2908,10 +2610,8 @@ transitions:
     target_start: circle_plain_4
     target_end: circle_plain_4
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
     target_start: circle_plain_4
@@ -2924,903 +2624,531 @@ transitions:
     actor_end: diamond_checkered_0
     target_start: circle_plain_4
     target_end: circle_plain_4
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: circle_plain_4
-    target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: circle_plain_4
-    target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: circle_plain_4
-    target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
+  - actor_start: diamond_plain_1
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
+  - actor_start: square_plain_1
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
+  - actor_start: circle_plain_1
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
+  - actor_start: circle_plain_2
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
+  - actor_start: diamond_plain_2
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
+  - actor_start: square_plain_2
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
+  - actor_start: square_plain_3
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
+  - actor_start: diamond_plain_3
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
+  - actor_start: circle_plain_3
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
     target_start: circle_plain_4
     target_end: circle_plain_5
-    modify_uses: [1,0]
+  - actor_start: diamond_plain_4
+    target_start: circle_plain_4
+    target_end: circle_plain_5
+  - actor_start: square_plain_4
+    target_start: circle_plain_4
+    target_end: circle_plain_5
+  - actor_start: circle_plain_4
+    target_start: circle_plain_4
+    target_end: circle_plain_5
   - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: triangle_plain_4
+    target_start: triangle_plain_5
     target_end: triangle_plain_5
-    modify_uses: [1,0]
+  - actor_start: square_plain_0
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: triangle_plain_4
+    target_start: triangle_plain_5
     target_end: triangle_plain_5
-    modify_uses: [1,0]
+  - actor_start: triangle_plain_0
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: triangle_plain_4
+    target_start: triangle_plain_5
     target_end: triangle_plain_5
-    modify_uses: [1,0]
+  - actor_start: diamond_plain_0
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_5
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: triangle_plain_4
-    target_end: triangle_plain_4
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: triangle_plain_4
+    target_start: triangle_plain_5
     target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: triangle_plain_4
-    target_end: triangle_plain_5
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: square_plain_5
-    target_end: square_plain_5
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: square_plain_1
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: circle_plain_2
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: diamond_plain_2
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: square_plain_2
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: square_plain_3
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: diamond_plain_3
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: circle_plain_3
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_5
-    actor_end: square_plain_5
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_5
-    actor_end: diamond_plain_5
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_5
-    actor_end: circle_plain_5
-    target_start: square_plain_5
-    target_end: square_plain_6
-    modify_uses: [1,0]
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: diamond_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: square_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: circle_plain_4
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
   - actor_start: triangle_plain_5
-    actor_end: triangle_plain_5
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: circle_plain_5
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: diamond_plain_5
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: square_plain_5
+    target_start: triangle_plain_5
+    target_end: triangle_plain_6
+  - actor_start: circle_plain_0
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: square_plain_0
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: triangle_plain_0
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: diamond_plain_0
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: circle_plain_5
+    target_end: circle_plain_5
+  - actor_start: triangle_plain_1
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_plain_1
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_plain_1
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_1
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: triangle_plain_2
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_2
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_plain_2
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_plain_2
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: triangle_plain_3
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_plain_3
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_plain_3
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_3
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: triangle_plain_4
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_plain_4
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_plain_4
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_4
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: triangle_plain_5
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_5
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: diamond_plain_5
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: square_plain_5
+    target_start: circle_plain_5
+    target_end: circle_plain_6
+  - actor_start: circle_plain_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_dots_0
+    actor_end: circle_dots_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: circle_stripes_0
+    actor_end: circle_stripes_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: circle_checkered_0
+    actor_end: circle_checkered_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: square_plain_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_dots_0
+    actor_end: square_dots_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: square_stripes_0
+    actor_end: square_stripes_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: square_checkered_0
+    actor_end: square_checkered_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: triangle_plain_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: triangle_dots_0
+    actor_end: triangle_dots_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: triangle_stripes_0
+    actor_end: triangle_stripes_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: triangle_checkered_0
+    actor_end: triangle_checkered_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: diamond_plain_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_dots_0
+    actor_end: diamond_dots_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: diamond_stripes_0
+    actor_end: diamond_stripes_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: diamond_checkered_0
+    actor_end: diamond_checkered_0
+    target_start: diamond_plain_5
+    target_end: diamond_plain_5
+  - actor_start: triangle_plain_1
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_plain_1
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_plain_1
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_1
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: triangle_plain_2
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_2
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_plain_2
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_plain_2
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: triangle_plain_3
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_plain_3
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_plain_3
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_3
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: triangle_plain_4
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_plain_4
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_plain_4
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_4
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: triangle_plain_5
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_5
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: diamond_plain_5
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: square_plain_5
+    target_start: diamond_plain_5
+    target_end: diamond_plain_6
+  - actor_start: circle_plain_0
     target_start: square_plain_5
     target_end: square_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
   - actor_start: circle_dots_0
     actor_end: circle_dots_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: circle_stripes_0
     actor_end: circle_stripes_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: circle_checkered_0
     actor_end: circle_checkered_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: square_dots_0
     actor_end: square_dots_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: square_stripes_0
     actor_end: square_stripes_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: square_checkered_0
     actor_end: square_checkered_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: triangle_dots_0
     actor_end: triangle_dots_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: triangle_stripes_0
     actor_end: triangle_stripes_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: triangle_checkered_0
     actor_end: triangle_checkered_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: diamond_dots_0
     actor_end: diamond_dots_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: diamond_stripes_0
     actor_end: diamond_stripes_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: diamond_checkered_0
     actor_end: diamond_checkered_0
-    target_start: diamond_plain_5
-    target_end: diamond_plain_5
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_5
   - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_5
-    actor_end: square_plain_5
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_5
-    actor_end: diamond_plain_5
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_5
-    actor_end: circle_plain_5
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_5
-    actor_end: triangle_plain_5
-    target_start: diamond_plain_5
-    target_end: diamond_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: circle_plain_5
-    target_end: circle_plain_5
-  - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_5
-    actor_end: square_plain_5
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_5
-    actor_end: diamond_plain_5
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_5
-    actor_end: circle_plain_5
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_5
-    actor_end: triangle_plain_5
-    target_start: circle_plain_5
-    target_end: circle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_0
-    actor_end: circle_plain_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_dots_0
-    actor_end: circle_dots_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: circle_stripes_0
-    actor_end: circle_stripes_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: circle_checkered_0
-    actor_end: circle_checkered_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: square_plain_0
-    actor_end: square_plain_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_dots_0
-    actor_end: square_dots_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: square_stripes_0
-    actor_end: square_stripes_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: square_checkered_0
-    actor_end: square_checkered_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: triangle_plain_0
-    actor_end: triangle_plain_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_dots_0
-    actor_end: triangle_dots_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: triangle_stripes_0
-    actor_end: triangle_stripes_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: triangle_checkered_0
-    actor_end: triangle_checkered_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: diamond_plain_0
-    actor_end: diamond_plain_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_dots_0
-    actor_end: diamond_dots_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: diamond_stripes_0
-    actor_end: diamond_stripes_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
-  - actor_start: diamond_checkered_0
-    actor_end: diamond_checkered_0
-    target_start: triangle_plain_5
-    target_end: triangle_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: square_plain_1
-    actor_end: square_plain_1
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_1
-    actor_end: diamond_plain_1
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: circle_plain_1
-    actor_end: circle_plain_1
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: triangle_plain_1
-    actor_end: triangle_plain_1
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_2
-    actor_end: square_plain_2
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_2
-    actor_end: diamond_plain_2
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_2
-    actor_end: circle_plain_2
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: triangle_plain_2
-    actor_end: triangle_plain_2
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_3
-    actor_end: square_plain_3
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_3
-    actor_end: diamond_plain_3
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_3
-    actor_end: circle_plain_3
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: circle_plain_2
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: diamond_plain_2
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: square_plain_2
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: triangle_plain_3
-    actor_end: triangle_plain_3
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_4
-    actor_end: square_plain_4
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_4
-    actor_end: diamond_plain_4
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_4
-    actor_end: circle_plain_4
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: square_plain_3
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: diamond_plain_3
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: circle_plain_3
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: triangle_plain_4
-    actor_end: triangle_plain_4
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: square_plain_5
-    actor_end: square_plain_5
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: diamond_plain_5
-    actor_end: diamond_plain_5
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
-  - actor_start: circle_plain_5
-    actor_end: circle_plain_5
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: diamond_plain_4
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: square_plain_4
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: circle_plain_4
+    target_start: square_plain_5
+    target_end: square_plain_6
   - actor_start: triangle_plain_5
-    actor_end: triangle_plain_5
-    target_start: triangle_plain_5
-    target_end: triangle_plain_6
-    modify_uses: [1,0]
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: circle_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: diamond_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_6
+  - actor_start: square_plain_5
+    target_start: square_plain_5
+    target_end: square_plain_6
