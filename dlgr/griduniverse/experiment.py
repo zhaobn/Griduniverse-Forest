@@ -551,7 +551,7 @@ class Gridworld(object):
     @property
     def game_over(self):
         # return self.round >= self.num_rounds
-        return self.num_actions >= self.game_over_cond
+        return self.num_actions >= self.game_over_cond or len(self.item_locations) < 1
 
     def serialize(self, include_walls=True, include_items=True):
         grid_data = {

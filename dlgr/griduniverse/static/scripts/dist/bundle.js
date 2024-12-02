@@ -22482,6 +22482,9 @@ var require;/*global dallinger, store */
     $("#grid").hide();
 
     document.getElementById('composer').style.display = 'flex';
+    document.getElementById('composer-next').onclick = function() {
+      callback()
+    }
 
     if (settings.leaderboard_time) {
       settings.paused_game = true;

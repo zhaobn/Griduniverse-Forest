@@ -17,8 +17,11 @@
 
 #composer {
     flex-direction: column;
+    width: 65%;
 }
-
+#composer-text {
+    height: 400px;
+}
 
 table.scrolldown {
     width: 100%;
