@@ -89,6 +89,11 @@
     <div id="grid" data-identicon-salt="{{ app_id }}">
         <!-- Grid will be inserted here. -->
     </div>
+    <div id="composer" style="display:none;">
+        <p>Enter your response:</p>
+        <textarea id="compose-text" placeholder="Type your response here..."></textarea>
+        <button id="composer-submit">Submit</button>
+    </div>
 
     {% if experiment.grid.show_found_recipes or experiment.grid.show_item_points %}
     <div id="infodashboard" style="padding-left: 20px;">
@@ -142,6 +147,7 @@
     {% endif %}
 </div>
 {% endif %}
+
 
 {% if experiment.grid.show_chatroom %}
 <div id="chat">

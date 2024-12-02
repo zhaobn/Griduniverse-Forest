@@ -22469,6 +22469,47 @@ var require;/*global dallinger, store */
     $("#chatlog").scrollTop($("#chatlog")[0].scrollHeight);
   }
 
+  function composeTransmission(msg, callback) {
+    console.log(msg)
+
+    $("#game-over").hide();
+    $("#dashboard").hide();
+    $("#inventory").hide();
+    $("#location-contents").hide();
+    $("#item-transitions").hide();
+    $("#grid").hide();
+
+    document.getElementById('composer').style.display = 'flex';
+    document.getElementById('composer-submit').addEventListener('click', function () {
+      console.log("Submitting composition.");
+      // TODO
+      var $elements = [$("form :input"), $(this)],
+        questionSubmission = dallinger.submitQuestionnaire("questionnaire");
+
+      // spinner.freeze($elements);
+      questionSubmission.done(callback);
+      // questionSubmission.always(function () {
+      //   spinner.unfreeze();
+      // });
+
+      // settings.paused_game = false;
+      // callback();
+    })
+
+    if (settings.leaderboard_time) {
+      settings.paused_game = true;
+      setTimeout(function () {
+        // collect data
+        settings.paused_game = false;
+        if (callback) {
+          callback();
+        }
+      }, 1000 * settings.leaderboard_time);
+    } else if (callback) {
+      callback();
+    }
+  }
+
   function displayLeaderboards(msg, callback) {
     if (!settings.leaderboard_group && !settings.leaderboard_individual) {
       if (callback) {
@@ -22553,7 +22594,8 @@ var require;/*global dallinger, store */
     }
     return function (msg) {
       $("#game-over").show();
-      return displayLeaderboards(msg, callback);
+      // return displayLeaderboards(msg, callback);
+      return composeTransmission(msg, callback);
     };
   }
 

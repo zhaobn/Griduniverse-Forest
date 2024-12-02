@@ -114,6 +114,7 @@ GU_PARAMS = {
     "public_knowledge": bool,
     "show_found_recipes": bool,
     "show_item_points": bool,
+    "show_composer": bool,
     "game_over_cond": int,
 }
 
@@ -235,6 +236,7 @@ class Gridworld(object):
         self.public_knowledge = kwargs.get("public_knowledge", True)
         self.show_found_recipes = kwargs.get("show_found_recipes", True)
         self.show_item_points = kwargs.get("show_item_points", True)
+        self.show_composer = kwargs.get("show_composer", True)
 
         # Walls
         self.walls_visible = kwargs.get("walls_visible", True)
@@ -462,7 +464,7 @@ class Gridworld(object):
 
             self.start_timestamp = time.time()
             # Delay round for leaderboard display
-            if self.leaderboard_individual or self.leaderboard_group:
+            if self.leaderboard_individual or self.leaderboard_group or self.show_composer:
                 self.start_timestamp += self.leaderboard_time
             for player in self.players.values():
                 player.motion_timestamp = 0

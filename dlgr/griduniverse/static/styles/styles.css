@@ -15,8 +15,10 @@
     vertical-align: top;
 }
 
-#dashboard {
+#composer {
+    flex-direction: column;
 }
+
 
 table.scrolldown {
     width: 100%;
