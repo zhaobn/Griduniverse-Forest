@@ -22342,6 +22342,9 @@ var require;/*global dallinger, store */
         cellTransitions.innerHTML = `${replaceItemNameWithEmoji(msg.item1, true)} + ${replaceItemNameWithEmoji(msg.item2, true)} = ${replaceItemNameWithEmoji(msg.resultitem, true)}`;
         transitionHistory.set(transitionKey, "success");
       }
+
+      // Scroll the newly added row into view
+      row.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   }
 
@@ -22470,7 +22473,6 @@ var require;/*global dallinger, store */
   }
 
   function composeTransmission(msg, callback) {
-    console.log(msg)
 
     $("#game-over").hide();
     $("#dashboard").hide();
@@ -22480,21 +22482,6 @@ var require;/*global dallinger, store */
     $("#grid").hide();
 
     document.getElementById('composer').style.display = 'flex';
-    document.getElementById('composer-submit').addEventListener('click', function () {
-      console.log("Submitting composition.");
-      // TODO
-      var $elements = [$("form :input"), $(this)],
-        questionSubmission = dallinger.submitQuestionnaire("questionnaire");
-
-      // spinner.freeze($elements);
-      questionSubmission.done(callback);
-      // questionSubmission.always(function () {
-      //   spinner.unfreeze();
-      // });
-
-      // settings.paused_game = false;
-      // callback();
-    })
 
     if (settings.leaderboard_time) {
       settings.paused_game = true;
@@ -22660,6 +22647,28 @@ var require;/*global dallinger, store */
     // Opt out of the experiment.
     $("#opt-out").on("click", function () {
       window.location.href = "/questionnaire?participant_id=" + player_id;
+    });
+
+    // Submit composition
+    $("#composer-submit").on("click", function () {
+
+      const responseInput = document.getElementById('composer-text');
+      const responseText = responseInput.value.trim();
+      if (responseText) {
+        msg = {
+          type: "composition",
+          player_id: player_id,
+          content: responseText,
+        };
+        socket.send(msg);
+        document.getElementById('composer-next').disabled = false;
+
+        console.log(msg)
+
+
+      } else {
+        alert('Please enter a response before submitting.');
+      }
     });
 
     if (isSpectator) {

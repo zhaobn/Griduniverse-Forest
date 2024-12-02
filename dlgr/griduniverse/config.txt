@@ -19,7 +19,7 @@ show_found_recipes = true
 show_item_points = true
 show_composer = true
 leaderboard_time = 30
-game_over_cond = 3
+game_over_cond = 2
 
 [HIT Configuration]
 title = Griduniverse

@@ -1305,6 +1305,7 @@ class Griduniverse(Experiment):
                     "item_consume": self.handle_item_consume,
                     "item_transition": self.handle_item_transition,
                     "item_drop": self.handle_item_drop,
+                    "composition": self.handle_composition,
                 }
             )
 
@@ -1403,6 +1404,9 @@ class Griduniverse(Experiment):
 
     def handle_disconnect(self, msg):
         logger.info("Client {} has disconnected.".format(msg["player_id"]))
+
+    def handle_composition(self, msg):
+        self.record_event(msg)
 
     def handle_chat_message(self, msg):
         """Publish the given message to all clients."""

@@ -91,8 +91,12 @@
     </div>
     <div id="composer" style="display:none;">
         <p>Enter your response:</p>
-        <textarea id="compose-text" placeholder="Type your response here..."></textarea>
-        <button id="composer-submit">Submit</button>
+        <textarea id="composer-text" placeholder="Type your response here..."></textarea>
+        <div>
+            <button id="composer-submit">Submit</button>
+            <button id="composer-next" disabled>Next</button>
+        </div>
+
     </div>
 
     {% if experiment.grid.show_found_recipes or experiment.grid.show_item_points %}
