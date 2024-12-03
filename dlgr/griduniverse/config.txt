@@ -4,7 +4,7 @@ auto_recruit = true
 network = FullyConnected
 max_participants = 1
 num_rounds = 1
-num_games = 2
+num_games = 3
 time_per_round = 200
 block_size = 30
 columns = 20
@@ -20,7 +20,7 @@ show_found_recipes = true
 show_item_points = true
 show_composer = true
 leaderboard_time = 30
-game_over_cond = 2
+game_over_cond = 3
 lock_table_when_creating_participant = false
 
 [HIT Configuration]

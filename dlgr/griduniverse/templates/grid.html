@@ -18,7 +18,7 @@
     settings.background_animation = {% if experiment.config.background_animation != False %}true{% else %}false{% endif %};
     settings.time_per_round = {{ experiment.config.time_per_round }};
     settings.num_rounds = {{ experiment.config.num_rounds }};
-    settings.game_over_cond = {{ experiment.grid.game_over_cond }};
+    settings.game_over_cond = {{ experiment.config.game_over_cond }};
     settings.player_colors = {{ experiment.serialize(experiment.limited_player_colors) }};
     settings.player_color_names = {{ experiment.serialize(experiment.limited_player_color_names)|safe }};
     settings.tax = {{ experiment.config.tax or 0.00 }};
@@ -100,10 +100,10 @@
 
     </div>
 
-    {% if experiment.grid.show_found_recipes or experiment.grid.show_item_points %}
+    {% if experiment.config.show_found_recipes or experiment.config.show_item_points %}
     <div id="infodashboard" style="padding-left: 20px;">
 
-        {% if experiment.grid.show_found_recipes %}
+        {% if experiment.config.show_found_recipes %}
         <table id="recipe-table" class="scrolldown">
             <thead>
                 <tr>
@@ -116,7 +116,7 @@
          </table>
         {% endif %}
 
-        {% if experiment.grid.show_item_points %}
+        {% if experiment.config.show_item_points %}
         <table id="reward-table" class="scrolldown">
             <thead>
                 <tr>
@@ -135,7 +135,7 @@
 
 </div>
 
-{% if experiment.grid.donation_amount %}
+{% if experiment.config.donation_amount %}
 <div id="donate" class="for-players">
     <label>Give {{ experiment.config.donation_amount }} point{{experiment.config.donation_amount > 1 and 's' or ''}} to:</label>
     {% if experiment.config.donation_individual %}
@@ -154,7 +154,7 @@
 {% endif %}
 
 
-{% if experiment.grid.show_chatroom %}
+{% if experiment.config.show_chatroom %}
 <div id="chat">
     <div id="chatlog">
         <ul id="messages">

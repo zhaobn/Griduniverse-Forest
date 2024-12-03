@@ -1878,6 +1878,7 @@ class Griduniverse(Experiment):
         return json.dumps(value)
 
     def get_game_for_player_id(self, player_id):
+        print(player_id)
         # Lookup the node for this player
         player_node = (
             self.session.query(dallinger.models.Node)
