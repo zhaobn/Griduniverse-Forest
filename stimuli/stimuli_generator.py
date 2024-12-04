@@ -155,8 +155,8 @@ for level in range(max_level):
   env_objs[next_level_name] = []
   env_items[next_level_name] = []
 
-  new_obj_names = [x['name'] for x in env_items[level_name]]
-  current_obj_names = [x['name'] for x in flatten_dict(env_items)]
+  new_obj_names = list(set([x['name'] for x in env_items[level_name]]))
+  current_obj_names = list(set([x['name'] for x in flatten_dict(env_items)]))
 
 
   for a_name in new_obj_names:
@@ -168,13 +168,14 @@ for level in range(max_level):
         env_objs[next_level_name].append(r_name)
 
         transition = fmt_transition(a_name, b_name, r_name)
-        transition = fmt_transition(b_name, a_name, r_name)
+        transition_dir = fmt_transition(b_name, a_name, r_name) # direction doesn't matter
 
       else:
         transition = fmt_transition(a_name, b_name, '')
-        transition = fmt_transition(b_name, a_name, '')
+        transition_dir = fmt_transition(b_name, a_name, '')
 
       env_recipes[level_name].append(transition)
+      env_recipes[level_name].append(transition_dir)
 
   env_objs[next_level_name] = list(set(env_objs[next_level_name]))
 
@@ -193,3 +194,5 @@ with open("output.yaml", "w") as file:
   yaml.dump(data, file, sort_keys=False, indent=2)
 
 print("YAML content generated and saved to output.yaml")
+
+# %%
