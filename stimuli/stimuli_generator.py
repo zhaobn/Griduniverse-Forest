@@ -1,99 +1,96 @@
 # %%
 import yaml
 
-# %% try out rules
+# %% Setup - double-check with draw_obj.py
+
 all_shapes = ['circle', 'square', 'triangle', 'diamond']
 all_textures = ['plain', 'dots', 'stripes', 'checkered']
+max_level = 6
+file_prefix = '../dlgr/griduniverse/static/images/objs/'
+
 
 all_objs = []
-for i in range(len(all_shapes)):
-  for j in range(len(all_textures)):
-    all_objs.append(str(i)+str(j))
-
-all_pairs = []
-for a in all_objs:
-  for b in all_objs:
-    all_pairs.append(a + '|' + b)
-
-
-plains_collection = [obj for obj in all_pairs if obj[1] == '0' and obj[4] == '0']
-
-diffs_collection = [obj for obj in all_pairs if obj[0] in ('1', '2') and obj[1] in ('1', '2') and obj[3] in ('0', '3') and obj[4] in ('0', '3') and obj[0] != obj[3] and obj[1] != obj[4] ]
-
-
-hard_collection = []
-
-for a in all_objs:
-
-  if a[0] == a[1]:
-    b = a[0] + a[1]
-
-  elif int(a[0]) + int(a[1]) == 2:
-    b = a[1] + a[0]
-
-  elif int(a[0]) < int(a[1]):
-    b = a[0] + str(3 - int(a[1]))
-
-  else:
-    b = str(3 - int(a[0])) + a[1]
-
-  hard_collection.append(a + '|' + b)
-
-hard_collection
+for s in all_shapes:
+  for t in all_textures:
+    all_objs.append(f'{s}_{t}')
 
 # %% Rules to functions
-def is_both_plain (obj_a, obj_b, use_name=False):
 
- if use_name:
-   return obj_a.split('_')[1] == 'plain' and obj_b.split('_')[1] == 'plain'
+def get_shape(obj):
+  return obj.split('_')[0]
 
- else:
-  return all_textures[int(obj_a[1])] == 'plain' and all_textures[int(obj_b[1])] == 'plain'
+def get_texture(obj):
+  return obj.split('_')[1]
+
+def get_level(obj):
+  return int(obj.split('_')[2])
+
+def compose_obj(shape, color, level):
+  return f'{shape}_{color}_{level}'
 
 
-def is_diff_in_range (obj_a, obj_b):
-  return obj_a[0] in ('1', '2') and obj_a[1] in ('1', '2') and obj_b[0] in ('0', '3') and obj_b[1] in ('0', '3') and obj_a[0] != obj_b[0] and obj_a[1] != obj_b[1]
 
 
+def is_same_shape (obj_arr):
+  return (
+    get_shape(obj_arr[0]) == get_shape(obj_arr[1]) and
+    get_shape(obj_arr[0]) != 'circle'
+  )
+
+def is_diff (obj_arr):
+  return (
+    get_shape(obj_arr[0]) != get_shape(obj_arr[1]) and get_texture(obj_arr[0]) != get_texture(obj_arr[1]) and
+    get_shape(obj_arr[0]) == 'circle'
+  )
+
+def is_impossible (obj_arr):
+  obj_a_shape_index = all_shapes.index(get_shape(obj_arr[0]))
+  obj_a_texture_index = all_textures.index(get_texture(obj_arr[0]))
+  obj_b_shape_index = all_shapes.index(get_shape(obj_arr[1]))
+  obj_b_texture_index = all_textures.index(get_texture(obj_arr[1]))
+
+  if obj_a_shape_index != obj_a_texture_index:
+
+    if obj_a_shape_index + obj_b_shape_index == 3 and obj_a_texture_index + obj_b_texture_index == 3:
+      return True
+
+    if obj_b_shape_index == obj_a_texture_index and obj_b_texture_index == obj_a_shape_index:
+      return True
 
 
-def is_hard(obj_a, obj_b):
+  if obj_a_shape_index == obj_a_texture_index or obj_a_shape_index + obj_a_texture_index == 3:
 
-  if obj_a[0] == obj_a[1] and obj_a == obj_b:
-    return True
+    if obj_b_shape_index == obj_a_shape_index and obj_b_texture_index + obj_a_texture_index == 3:
+      return True
 
-  if int(obj_a[0]) + int(obj_a[1]) == 2 and obj_b[0] == obj_a[1] and obj_b[1] == obj_a[0]:
-    return True
-
-  if int(obj_a[0]) < int(obj_a[1]) and obj_b[0] == obj_a[0] and int(obj_b[1]) + int(obj_a[1]) == 3:
-    return True
-
-  if int(obj_b[0]) + int(obj_a[0]) == 2 and obj_b[1] == obj_a[1]:
-    return True
+    if obj_b_texture_index == obj_a_texture_index and obj_b_shape_index + obj_a_shape_index == 3:
+      return True
 
   return False
 
+# Debug
+# all_pairs = []
+# for o1 in all_objs:
+#   for o2 in all_objs:
+#     if o1 != o2:
+#       all_pairs.append(f'{o1}|{o2}')
 
+# filtered_list = [pair for pair in all_pairs if is_impossible(pair.split('|'))]
+# len(filtered_list)
 
+#%%
 
 def get_new_obj(obj_a, obj_b):
-  return obj_a[0] + obj_b[1]
+  new_level = max(get_level(obj_a), get_level(obj_b)) + 1
+  return get_shape(obj_a) + '_' + get_texture(obj_b) + '_' + str(new_level)
 
-def get_new_obj_from_name(obj_a_name, obj_b_name):
-  level = max(int(obj_a_name.split('_')[2]), int(obj_b_name.split('_')[2])) + 1
-  return '_'.join([obj_a_name.split('_')[0], obj_b_name.split('_')[1], str(int(level))])
 
-def obj_to_name(obj, level_int):
-  obj_shape = all_shapes[int(obj[0])]
-  obj_texture = all_textures[int(obj[1])]
-  return f"{obj_shape}_{obj_texture}_{level_int}"
+def obj_to_item(obj_name, default_count=0):
 
-def obj_to_item(obj, level_int, default_count=0):
+  # point_step = level_int // 3
+  # points = 4**point_step * 5**(level_int-point_step)
 
-  obj_name = obj if '_' in obj else obj_to_name(obj, level_int)
-
-  point_step = level_int // 3
-  points = 4**point_step * 5**(level_int-point_step)
+  points = 10**(get_level(obj_name))
 
   item = {
       "sprite": "image:objs/" + obj_name + '.svg',
@@ -125,22 +122,12 @@ def fmt_transition(a, b, r):
 def flatten_dict(dict):
   return [el for sublist in dict.values() for el in sublist]
 
-def name_to_code(obj_name):
-  shape_code = all_shapes.index(obj_name.split('_')[0])
-  texture_code = all_textures.index(obj_name.split('_')[1])
-  return str(shape_code) + str(texture_code)
-
 
 # %%
-# get pilot recipe
-max_level = 6
-file_prefix = '../dlgr/griduniverse/static/images/objs/'
 
-env_objs = {}
-env_items = {}
-env_recipes = {}
-
-# draw_item = True
+env_objs = {} # obj name, shape_texture_level
+env_items = {} # yaml entry
+env_recipes = {} # yaml entry
 
 for level in range(max_level):
 
@@ -152,22 +139,15 @@ for level in range(max_level):
 
   # Base level
   if level == 0:
-    env_objs[level_name] = all_objs.copy()
+    env_objs[level_name] = [f'{x}_0' for x in all_objs]
     env_items[level_name] = []
     item_default_count = 1
 
   # Prep items
   for obj in env_objs[level_name]:
 
-    obj_shape = all_shapes[int(obj[0])]
-    obj_texture = all_textures[int(obj[1])]
-
-    # if draw_item:
-    #   draw_object(obj_shape, pattern=obj_texture, level=level, prefix=file_prefix)
-
-    item = obj_to_item(obj, level, item_default_count)
+    item = obj_to_item(obj, item_default_count)
     env_items[level_name].append(item)
-
 
   # Transit to next level
   env_recipes[level_name] = []
@@ -178,14 +158,14 @@ for level in range(max_level):
   new_obj_names = [x['name'] for x in env_items[level_name]]
   current_obj_names = [x['name'] for x in flatten_dict(env_items)]
 
+
   for a_name in new_obj_names:
     for b_name in current_obj_names:
 
-      if is_both_plain(a_name, b_name, use_name=True):
+      if level < max_level and is_same_shape([a_name, b_name]):
 
-        r_name = get_new_obj_from_name(a_name, b_name)
-        r = name_to_code(r_name)
-        env_objs[next_level_name].append(r)
+        r_name = get_new_obj(a_name, b_name)
+        env_objs[next_level_name].append(r_name)
 
         transition = fmt_transition(a_name, b_name, r_name)
         transition = fmt_transition(b_name, a_name, r_name)
@@ -203,7 +183,6 @@ for level in range(max_level):
 
 # Define the base YAML structure
 
-
 data = {
     "items": flatten_dict(env_items),
     "transitions": flatten_dict(env_recipes)
@@ -214,5 +193,3 @@ with open("output.yaml", "w") as file:
   yaml.dump(data, file, sort_keys=False, indent=2)
 
 print("YAML content generated and saved to output.yaml")
-
-# %%
