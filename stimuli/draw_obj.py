@@ -80,3 +80,14 @@ def draw_object(shape, pattern='plain', level=0, size=1.0, prefix='', save=True)
 # draw_object('square', pattern='dots', level=3, save=False)
 # draw_object('circle', pattern='stripes', level=8, save=False)
 # draw_object('diamond', pattern='checkered', save=False)
+
+# %% Generate stimuli img for experiment
+all_shapes = ['circle', 'square', 'triangle', 'diamond']
+all_textures = ['plain', 'dots', 'stripes', 'checkered']
+max_level = 6
+file_prefix = '../dlgr/griduniverse/static/images/objs/'
+
+for k in range(max_level):
+  for i in all_shapes:
+    for j in all_textures:
+      draw_object(i, j, k, 1, file_prefix, True)

@@ -7,7 +7,7 @@ from matplotlib.lines import Line2D
 import yaml
 
 
-# %%
+# %% drawing helpers
 colors = ['#FF0000', '#FF7F00', '#CCCC00', '#008000', '#0000FF', '#8B00FF', '#4B0082']
 default_color = '#d3d3d3'
 
@@ -172,3 +172,43 @@ with open("output.yaml", "w") as file:
   yaml.dump(data, file, sort_keys=False, indent=2)
 
 print("YAML content generated and saved to output.yaml")
+
+# %% try out rules
+all_shapes = ['circle', 'square', 'triangle', 'diamond']
+all_textures = ['plain', 'dots', 'stripes', 'checkered']
+
+all_objs = []
+for i in range(len(all_shapes)):
+  for j in range(len(all_textures)):
+    all_objs.append(str(i)+str(j))
+
+all_pairs = []
+for a in all_objs:
+  for b in all_objs:
+    all_pairs.append(a + '|' + b)
+
+
+plains_collection = [obj for obj in all_pairs if obj[1] == '0' and obj[4] == '0']
+
+diffs_collection = [obj for obj in all_pairs if obj[0] in ('1', '2') and obj[1] in ('1', '2') and obj[3] in ('0', '3') and obj[4] in ('0', '3') and obj[0] != obj[3] and obj[1] != obj[4] ]
+
+
+hard_collection = []
+
+for a in all_objs:
+
+  if a[0] == a[1]:
+    b = a[0] + a[1]
+
+  elif int(a[0]) + int(a[1]) == 2:
+    b = a[1] + a[0]
+
+  elif int(a[0]) < int(a[1]):
+    b = a[0] + str(3 - int(a[1]))
+
+  else:
+    b = str(3 - int(a[0])) + a[1]
+
+  hard_collection.append(a + '|' + b)
+
+hard_collection
