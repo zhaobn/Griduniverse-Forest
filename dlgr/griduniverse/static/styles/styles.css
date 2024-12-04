@@ -2,7 +2,13 @@
     max-width: 80rem !important;
     margin-top: 4rem !important;
 }
-
+.instruct-heading {
+    font-size: 1.2em; /* Slightly larger than main text */
+    font-weight: 600; /* Slightly bolded */
+    border-bottom: 2px solid #ccc; /* Underline spanning the page */
+    padding-bottom: 5px; /* Space between text and underline */
+    margin-bottom: 15px; /* Space between heading and next content */
+}
 #instructions {
     display: none;
 }

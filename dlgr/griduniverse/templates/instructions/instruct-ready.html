@@ -1,58 +1,46 @@
-<p>
-  The objective of the game is to maximize your final payoff.
-  The game is played on a 200 x 100 grid, where each
-  player occupies one block.<br>
-  <img src="./static/images/gameplay.png" height="250"><br>
-  The grid is viewed through a 20 x 20 window
-  that moves along with your player. The game has 3 rounds, each lasting
-  <strong>45.0 seconds</strong>.
-</p>
-<p>
-  Players move around the grid using the arrow keys.<br>
-  <img src="./static/images/keys.gif" height="60"><br>
-  A player cannot occupy a block where a player is
-  already present. Players cannot see the whole grid, but only an area
-  approximately 40 blocks around their current position.
-</p>
-<p>
-  Press the 'h' key to toggle highlighting of your player.<br>
-  <img src="./static/images/h-toggle.png" height="250">
-</p>
-<p>
-  Players gain points by picking up and eating edible items:
-  <ul>
-    <li>🥕 Wild Carrot (5 points)</li>
-    <li>🫐 Gooseberry (3 points)</li>
-  </ul>
-  Once a food item is being carried, pressing the spacebar causes
-  it to be eaten, which awards the points to the player.
-</p>
-<p>
-  The edible items do not exist on the board at the start of play.
-  Players must produce them by picking up other objects and carrying out
-  "transitions" to transform them, or by reaching a specific object and
-  triggering the transition.
-</p>
-  It is possible for the players to transform some items into food
-  in various ways:
-  <ul>
-    <li>Pick up a 💎 Sharp Stone and press the spacebar while
-        occupying the same square as a 🥕 Wild Carrot Plant.</li>
-    <li>Occupy same square as a 🌴 Gooseberry Bush and press spacebar to
-        eat a 🫐 Gooseberry. Gooseberry bushes have only 6 berries each.
-        Once all berries are eaten, the bush is empty and players can't
-        occupy the bush's square anymore.</li>
-    <li>If there are no 💎 Sharp Stones on the grid, players can create
-        one by picking up a <img src="./static/images/stone.png" width="16">
-	Stone, going to a 🗿 Big Hard Rock, and pressing the spacebar.</li>
-  </ul>
-</p>
-<p>
-  A chatroom is available to send messages to the other
-  players. Player names shown on the chat window are pseudonyms.<br>
-  <img src="./static/images/chatroom.gif" height="150">
-</p>
-<p>
-  You will receive <strong>$0.02</strong> for each point
-  that you score at the end of the game.
-</p>
+<h2 class="instruct-heading">Objective</h2>
+<p>Your goal is to <b>maximize points within 30 actions</b> by collecting, combining, and consuming items in a grid world.
+  Explore the world to discover new, more rewarding items and maximize your score.</p>
+
+  <img src="./static/images/demo.png" height="300" style="margin-left: 20px;"><br>
+
+
+<h2 class="instruct-heading">How to play:</h2>
+<ol>
+  <li><b>Move Your Avatar</b>: Use the <b>arrow keys</b> to navigate the grid world.<br>
+    <img src="./static/images/keys.gif" height="50" style="margin-left: 20px;"></li>
+
+  <li><b>Pick Up an Item</b>: Stand on an item and press the <b>spacebar</b> to pick it up.</li>
+
+  <li><b>Drop an Item</b>: Press the <b>D key</b> to drop the item you are holding.</li>
+
+  <li><b>Consume an Item</b> (<b>1 action</b>): While holding an item, press the <b>spacebar</b> to consume it and earn its points.</li>
+
+  <li><b>Combine Items</b> (<b>1 action</b>): While holding an item, stand on top of another item and press the <b>spacebar</b>. If the items can combine, they will transform into a <b>new item</b> that is <b>10 times more rewarding</b>.</li>
+</ol>
+
+
+<h2 class="instruct-heading">Item points:</h2>
+<ul>
+  <li><b>Base Items (Red)</b>: These are the starting items, worth <b>1 point</b> each.</li>
+  <li><b>Combining Items</b>: When you combine two items successfully, you create a <b>new item</b> that is <b>10 times</b> more rewarding!
+      For example, two red items can create an orange item, worth 10 points.</li>
+  <li>Items are ranked by <b>level</b>, shown as rainbow <b>colors</b>: Red → Orange → Yellow → Green → Blue → Purple</li>
+  <li>The level of a new item is <b>one level higher</b> than the highest-level item used in its combination.</li>
+</ul>
+
+<h2 class="instruct-heading">Strategy Tip:</h2>
+<p>Use your <b>30 actions</b> wisely: <b>Discovering and creating higher-level items</b> is key to earning more points—focus on finding and combining items to unlock new, more valuable levels!</p>
+
+<p>To help you keep track of combinations and item points, throughout the game, you will see
+  the history of combinations you've tried,
+  and the points value of items you've consumed or discovered </p>
+
+
+<h2 class="instruct-heading">After the game</h2>
+
+<p>At the end of the game, you'll have the chance to leave a <b>message for a future player</b>. Share any knowledge or tips you think will help them achieve a higher score.</p>
+
+<p>You will receive a <b>bonus</b> based on how many points you collect, and how well the future player who reads your message performs.</p>
+
+<p>Ready to Begin? Good luck and have fun!</p>
