@@ -1,10 +1,11 @@
 [Experiment Configuration]
-mode = debug
-auto_recruit = true
+mode = sandbox
+auto_recruit = false
+recruiter = hotair
 network = FullyConnected
 max_participants = 1
 num_rounds = 1
-num_games = 1
+num_games = 10
 time_per_round = 200
 block_size = 30
 columns = 20
@@ -14,7 +15,6 @@ window_columns = 20
 use_identicons = true
 show_chatroom = false
 others_visible = false
-recruiter = hotair
 public_knowledge = false
 show_found_recipes = true
 show_item_points = true
