@@ -1,5 +1,5 @@
 [Experiment Configuration]
-mode = sandbox
+mode = debug
 auto_recruit = false
 recruiter = hotair
 network = FullyConnected
