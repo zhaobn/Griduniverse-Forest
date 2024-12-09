@@ -20,7 +20,7 @@
 {% block container %}
 <h1>Instructions</h1>
 {% if experiment.instruct %}
-    <p>Welcome to the Griduniverse. Here are the instructions:</p>
+    <p>Welcome, and thank you for participating in our study! Please read the following instructions carefully.</p>
     {{ experiment.instructions()|safe }}
 {% else %}
     <p>Welcome to the Griduniverse. It's up to you to figure out the rules of the game.</p>
