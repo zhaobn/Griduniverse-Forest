@@ -22720,7 +22720,7 @@ var require;/*global dallinger, store */
     $("#composer-submit").on("click", function () {
 
       const responseInput = document.getElementById('composer-text');
-      const responseText = responseInput.value.trim();
+      const responseText = '<hard>' + responseInput.value.trim();
       if (responseText) {
         msg = {
           type: "composition",

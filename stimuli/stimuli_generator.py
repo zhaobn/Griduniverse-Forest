@@ -152,8 +152,9 @@ for level in range(max_level):
   # Transit to next level
   env_recipes[level_name] = []
 
-  env_objs[next_level_name] = []
-  env_items[next_level_name] = []
+  if level < max_level:
+    env_objs[next_level_name] = []
+    env_items[next_level_name] = []
 
   new_obj_names = list(set([x['name'] for x in env_items[level_name]]))
   current_obj_names = list(set([x['name'] for x in flatten_dict(env_items)]))
@@ -162,23 +163,37 @@ for level in range(max_level):
   for a_name in new_obj_names:
     for b_name in current_obj_names:
 
-      if level < max_level and is_same_shape([a_name, b_name]):
+      if level == max_level:
+
+        transition = fmt_transition(a_name, b_name, '')
+        transition_dir = fmt_transition(b_name, a_name, '')
+        env_recipes[level_name].append(transition)
+
+      elif level < max_level - 1 and is_diff([a_name, b_name]):
 
         r_name = get_new_obj(a_name, b_name)
         env_objs[next_level_name].append(r_name)
 
         transition = fmt_transition(a_name, b_name, r_name)
-        transition_dir = fmt_transition(b_name, a_name, r_name) # direction doesn't matter
+        env_recipes[level_name].append(transition)
+
+      elif level < max_level - 1 and is_impossible([b_name, a_name]):
+
+        r_name = get_new_obj(b_name, a_name)
+        env_objs[next_level_name].append(r_name)
+
+        transition = fmt_transition(a_name, b_name, r_name)
+        env_recipes[level_name].append(transition)
 
       else:
         transition = fmt_transition(a_name, b_name, '')
         transition_dir = fmt_transition(b_name, a_name, '')
 
-      env_recipes[level_name].append(transition)
-      env_recipes[level_name].append(transition_dir)
+        env_recipes[level_name].append(transition)
+        env_recipes[level_name].append(transition_dir)
 
   env_objs[next_level_name] = list(set(env_objs[next_level_name]))
-
+  env_recipes[level_name] = [dict(t) for t in {tuple(d.items()) for d in env_recipes[level_name]}]
 
 
 
