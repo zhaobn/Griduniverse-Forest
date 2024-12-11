@@ -1477,7 +1477,7 @@
     $("#composer-submit").on("click", function () {
 
       const responseInput = document.getElementById('composer-text');
-      const responseText = '<hard>' + responseInput.value.trim();
+      const responseText = responseInput.value.trim();
       if (responseText) {
         msg = {
           type: "composition",
