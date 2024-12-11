@@ -1,5 +1,4 @@
 [Experiment Configuration]
-mode = debug
 mode = sandbox
 auto_recruit = false
 recruiter = hotair
@@ -28,7 +27,6 @@ lock_table_when_creating_participant = false
 title = Griduniverse
 description = Play a game
 keywords = Psychology, game, play
-base_payment = 1.00
 base_payment = 2.00
 lifetime = 24
 duration = 0.1
