@@ -28,58 +28,25 @@ def get_level(obj):
 def compose_obj(shape, color, level):
   return f'{shape}_{color}_{level}'
 
-
-
-
 def is_same_shape (obj_arr):
   return (
-    get_shape(obj_arr[0]) == get_shape(obj_arr[1]) and
-    get_shape(obj_arr[0]) != 'circle'
+    get_shape(obj_arr[0]) == get_shape(obj_arr[1])
   )
 
-def is_diff (obj_arr):
+def plain_diff_shapes (obj_arr):
   return (
-    get_shape(obj_arr[0]) != get_shape(obj_arr[1]) and get_texture(obj_arr[0]) != get_texture(obj_arr[1]) and
-    get_shape(obj_arr[0]) == 'circle'
+    get_shape(obj_arr[0]) != get_shape(obj_arr[1]) and
+    get_texture(obj_arr[0]) == 'plain'
   )
 
-def is_impossible (obj_arr):
-  obj_a_shape_index = all_shapes.index(get_shape(obj_arr[0]))
-  obj_a_texture_index = all_textures.index(get_texture(obj_arr[0]))
-  obj_b_shape_index = all_shapes.index(get_shape(obj_arr[1]))
-  obj_b_texture_index = all_textures.index(get_texture(obj_arr[1]))
-
-  if obj_a_shape_index != obj_a_texture_index:
-
-    if obj_a_shape_index + obj_b_shape_index == 3 and obj_a_texture_index + obj_b_texture_index == 3:
-      return True
-
-    if obj_b_shape_index == obj_a_texture_index and obj_b_texture_index == obj_a_shape_index:
-      return True
-
-
-  if obj_a_shape_index == obj_a_texture_index or obj_a_shape_index + obj_a_texture_index == 3:
-
-    if obj_b_shape_index == obj_a_shape_index and obj_b_texture_index + obj_a_texture_index == 3:
-      return True
-
-    if obj_b_texture_index == obj_a_texture_index and obj_b_shape_index + obj_a_shape_index == 3:
-      return True
-
-  return False
-
-# Debug
-# all_pairs = []
-# for o1 in all_objs:
-#   for o2 in all_objs:
-#     if o1 != o2:
-#       all_pairs.append(f'{o1}|{o2}')
-
-# filtered_list = [pair for pair in all_pairs if is_impossible(pair.split('|'))]
-# len(filtered_list)
+def complex_rule (obj_arr):
+  return (
+    get_shape(obj_arr[0]) in ('circle', 'square') and
+    get_texture(obj_arr[1]) in ('plain', 'dots') and
+    get_shape(obj_arr[1]) != 'circle'
+  )
 
 #%%
-
 def get_new_obj(obj_a, obj_b):
   new_level = max(get_level(obj_a), get_level(obj_b)) + 1
   return get_shape(obj_a) + '_' + get_texture(obj_b) + '_' + str(new_level)
@@ -169,7 +136,7 @@ for level in range(max_level):
         transition_dir = fmt_transition(b_name, a_name, '')
         env_recipes[level_name].append(transition)
 
-      elif level < max_level - 1 and is_diff([a_name, b_name]):
+      elif level < max_level - 1 and complex_rule([a_name, b_name]):
 
         r_name = get_new_obj(a_name, b_name)
         env_objs[next_level_name].append(r_name)
@@ -177,7 +144,7 @@ for level in range(max_level):
         transition = fmt_transition(a_name, b_name, r_name)
         env_recipes[level_name].append(transition)
 
-      elif level < max_level - 1 and is_impossible([b_name, a_name]):
+      elif level < max_level - 1 and complex_rule([b_name, a_name]):
 
         r_name = get_new_obj(b_name, a_name)
         env_objs[next_level_name].append(r_name)
@@ -210,4 +177,41 @@ with open("output.yaml", "w") as file:
 
 print("YAML content generated and saved to output.yaml")
 
-# %%
+# %% Archive
+
+# def is_same_shape (obj_arr):
+#   return (
+#     get_shape(obj_arr[0]) == get_shape(obj_arr[1]) and
+#     get_shape(obj_arr[0]) != 'circle'
+#   )
+
+# def is_diff (obj_arr):
+#   return (
+#     get_shape(obj_arr[0]) != get_shape(obj_arr[1]) and get_texture(obj_arr[0]) != get_texture(obj_arr[1]) and
+#     get_shape(obj_arr[0]) == 'circle'
+#   )
+
+# def is_impossible (obj_arr):
+#   obj_a_shape_index = all_shapes.index(get_shape(obj_arr[0]))
+#   obj_a_texture_index = all_textures.index(get_texture(obj_arr[0]))
+#   obj_b_shape_index = all_shapes.index(get_shape(obj_arr[1]))
+#   obj_b_texture_index = all_textures.index(get_texture(obj_arr[1]))
+
+#   if obj_a_shape_index != obj_a_texture_index:
+
+#     if obj_a_shape_index + obj_b_shape_index == 3 and obj_a_texture_index + obj_b_texture_index == 3:
+#       return True
+
+#     if obj_b_shape_index == obj_a_texture_index and obj_b_texture_index == obj_a_shape_index:
+#       return True
+
+
+#   if obj_a_shape_index == obj_a_texture_index or obj_a_shape_index + obj_a_texture_index == 3:
+
+#     if obj_b_shape_index == obj_a_shape_index and obj_b_texture_index + obj_a_texture_index == 3:
+#       return True
+
+#     if obj_b_texture_index == obj_a_texture_index and obj_b_shape_index + obj_a_shape_index == 3:
+#       return True
+
+#   return False
